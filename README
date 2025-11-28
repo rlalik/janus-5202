@@ -1,0 +1,80 @@
+------------------------------------------------------------------------------
+  CAEN SpA
+  Via Vetraia, 11 - 55049 - Viareggio ITALY
+  +390594388398 - www.caen.it
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+
+    Janus 5202 README
+    
+------------------------------------------------------------------------------
+
+TABLE OF CONTENTS
+------------------
+
+A.  SYSTEM REQUIREMENTS
+B.  INSTALLATION
+C.  SUPPORT
+
+
+A. SYSTEM REQUIREMENTS
+-----------------------
+   
+  - **OS**: 64-bit only. Microsoft Windows 10 or higher, Linux
+ 
+  - **On Windows**:
+    - Python 3.8 or higher (for development or debugging purposes)
+    - Tkinter
+    - Pillow (with Tkinter support)
+    - Visual C++ runtime libraries
+
+  - **On Linux**:
+    - g++ with C++17 support
+	- make
+	- libusb-1.0
+	- pkg-config
+    - gnuplot (with wxt terminal support)
+    - Python 3.8 or higher
+    - Tkinter
+    - Pillow (with Tkinter support)
+    - Superuser privileges to run `sudo` for missing packages
+
+
+B. INSTALLATION
+----------------
+
+### Windows:
+ 1. **Run**:
+    - **For GUI mode**:
+        cd bin
+        Run `JanusPy.exe`
+    - **For console mode**:
+        cd bin
+        Run `JanusC.exe`
+
+### Linux:
+*********************************************************************************************
+**Note**: Janus self-installation is supported only on Debian-based and Fedora distributions.
+However, you can still run `Janus_Install.bash` as root. It provides a short guide on how to 
+install Janus step by step on unsupported distributions and sets the USB rules for USB connections.
+*********************************************************************************************
+
+ 1. **Installation**:
+	bash Janus_Install.bash
+    - Check if any required packages are missing and install them manually if the Linux distribution is not supported by the Janus Installer.     
+
+ 2. **Run**:
+    - **For GUI mode**:
+        cd gui
+        python3 JanusPy.pyw
+         
+    - **For console mode**:
+        cd bin
+        ./JanusC
+
+
+C. SUPPORT   
+-----------
+        
+For technical support, visit https://www.caen.it/mycaen/support/ (login and MyCAEN+ account required)
