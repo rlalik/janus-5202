@@ -58,7 +58,7 @@
 #endif
 
 #define SW_RELEASE_NUM			"4.3.0"
-#define SW_RELEASE_DATE			"27/11/2025"
+#define SW_RELEASE_DATE			"23/12/2025"
 #define FILE_LIST_VER			"3.4"
 
 #ifdef _WIN32

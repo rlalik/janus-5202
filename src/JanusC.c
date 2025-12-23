@@ -311,16 +311,20 @@ int Update_Service_Info(int handle) {
 		//BrdTemp[brd][TEMP_FPGA] = sEvt[brd].tempFPGA;
 		
 	} else {
-		ret |= FERS_HV_Get_Vmon(handle, &HVMon[brd][HV_VMON]);
-		ret |= FERS_HV_Get_Imon(handle, &HVMon[brd][HV_IMON]);
-		ret |= FERS_HV_Get_DetectorTemp(handle, &BrdTemp[brd][TEMP_DETECTOR]);
-		ret |= FERS_HV_Get_IntTemp(handle, &BrdTemp[brd][TEMP_HV]);
-		ret |= FERS_HV_Get_Status(handle, &b_on, &ramp, &ovc, &ovv);
-		ret |= FERS_Get_FPGA_Temp(handle, &BrdTemp[brd][TEMP_FPGA]);
-		ret |= FERS_Get_Board_Temp(handle, &BrdTemp[brd][TEMP_BOARD]);
-		//ret |= FERS_Get_FPGA_Temp(handle, &BrdTemp[brd][TEMP_FPGA]);
-		//ret |= FERS_Get_Board_Temp(handle, &BrdTemp[brd][TEMP_BOARD]);
-		ret |= FERS_ReadRegister(handle, a_acq_status, &StatusReg[brd]);
+		if ((AcqStatus != ACQSTATUS_RUNNING) || (FERS_CONNECTIONTYPE(handle) != FERS_CONNECTIONTYPE_USB)) {
+			// Register read/write is disabled during a run when connected via USB
+			ret |= FERS_HV_Get_Vmon(handle, &HVMon[brd][HV_VMON]);
+			ret |= FERS_HV_Get_Imon(handle, &HVMon[brd][HV_IMON]);
+			ret |= FERS_HV_Get_DetectorTemp(handle, &BrdTemp[brd][TEMP_DETECTOR]);
+			ret |= FERS_HV_Get_IntTemp(handle, &BrdTemp[brd][TEMP_HV]);
+			ret |= FERS_HV_Get_Status(handle, &b_on, &ramp, &ovc, &ovv);
+			ret |= FERS_Get_FPGA_Temp(handle, &BrdTemp[brd][TEMP_FPGA]);
+			ret |= FERS_Get_Board_Temp(handle, &BrdTemp[brd][TEMP_BOARD]);
+			//ret |= FERS_Get_FPGA_Temp(handle, &BrdTemp[brd][TEMP_FPGA]);
+			//ret |= FERS_Get_Board_Temp(handle, &BrdTemp[brd][TEMP_BOARD]);
+			ret |= FERS_ReadRegister(handle, a_acq_status, &StatusReg[brd]);
+		}
+
 		// Skip service event warning if it is the first sEvt or it has already been notify
 		if (AcqStatus == ACQSTATUS_RUNNING && J_cfg.EnableServiceEvent && !sEvt_missing[brd] && !first_sEvt[brd]) {
 			Con_printf("LCSp", "Brd %d Service Event Missing. AcqStatus = 0x%08X (ret = %d)\n", FERS_INDEX(handle), StatusReg[brd], ret);	// WARNING
@@ -888,27 +892,43 @@ int RunTimeCmd(int c)
 			int brd = 0;
 			if (J_cfg.NumBrd > 1) {
 				printf("Select Board (0 - %d): ", J_cfg.NumBrd - 1);
-				scanf("%d", &brd);
-				if ((brd >= 0) || (brd < J_cfg.NumBrd)) {
-					printf("Invalid board number\n");
-					while (((brd = getchar()) != '\n') && (brd != EOF));
-					return 0;
+				int ret = 1, trial = 0;
+				while (ret != 0 || trial < 5) {
+					int ret = Con_GetInt(&brd);
+					if (ret != 0 || ((brd < 0) || (brd >= J_cfg.NumBrd))) {
+						printf("Invalid board number\n");
+						ret = -1;
+						++trial;
+					}
 				}
+				if (ret != 0) return ret;
 			}
+
 			int thr;
 			printf("Enter threshold for board %d: ", brd);
-			int tret = scanf("%d", &thr);
-			if (tret != 1) {
-				printf("Invalid threshold value\n");
-				while (((thr = getchar()) != '\n') && (thr != EOF));
-				return 0;
+			int tret = 1, trial = 0; 
+			while (tret != 0 || trial < 5) {
+				Con_GetInt(&thr);
+				if (tret != 0) {
+					printf("Invalid threshold value\n");
+					while (((thr = getchar()) != '\n') && (thr != EOF));
+					++trial;
+				}
 			}
+			if (tret != 0) return tret;
 			thr = min(thr, 4095);
-			FERS_WriteRegister(handle[0], a_td_coarse_thr, thr);	// Discr Threshold 
-			FERS_WriteRegister(handle[0], a_scbs_ctrl, 0x000);  // set citiroc index = 0
-			FERS_SendCommand(handle[0], CMD_CFG_ASIC);
-			FERS_WriteRegister(handle[0], a_scbs_ctrl, 0x200);  // set citiroc index = 1
-			FERS_SendCommand(handle[0], CMD_CFG_ASIC);
+
+			ClearScreen();
+			printf("Board = %d\nNew Td_Threshold = %d\n", brd, thr);
+			printf("[0] Apply threshold\n");
+			printf("[any other key] return\n");
+			if (Con_getch() != '0') return 0;
+
+			FERS_WriteRegister(handle[brd], a_td_coarse_thr, thr);	// Discr Threshold 
+			FERS_WriteRegister(handle[brd], a_scbs_ctrl, 0x000);  // set citiroc index = 0
+			FERS_SendCommand(handle[brd], CMD_CFG_ASIC);
+			FERS_WriteRegister(handle[brd], a_scbs_ctrl, 0x200);  // set citiroc index = 1
+			FERS_SendCommand(handle[brd], CMD_CFG_ASIC);
 		}
 	}
 	if (c == 'V') {
@@ -1036,11 +1056,13 @@ int RunTimeCmd(int c)
 				if (c == '0' || c == 'r') break;
 				printf("Enter new value: ");
 				int nval;
-				int sret = scanf("%d", &nval);
-				if (sret != 1 || nval < 0) {
-					while (((nval = getchar()) != '\n') && (nval != EOF));
-					continue;
-				}
+				int sret = Con_GetInt(&nval);
+				if (sret != 0 || nval < 0) continue;
+				//	scanf("%d", &nval);
+				//if (sret != 1 || nval < 0) {
+				//	while (((nval = getchar()) != '\n') && (nval != EOF));
+				//	continue;
+				//}
 				if (c == '1') RunVars.StaircaseCfg[SCPARAM_MIN] = nval; // scanf("%d", &RunVars.StaircaseCfg[SCPARAM_MIN]);
 				if (c == '2') RunVars.StaircaseCfg[SCPARAM_MAX] = nval;
 				if (c == '3') RunVars.StaircaseCfg[SCPARAM_STEP] = nval;
@@ -1103,11 +1125,13 @@ int RunTimeCmd(int c)
 				if (c == '0' || c == 'r') break;
 				printf("Enter new value: ");
 				int nval;
-				int sret = scanf("%d", &nval);
-				if (sret != 1 || nval < 0) {
-					while (((nval = getchar()) != '\n') && (nval != EOF));
-					continue;
-				}
+				int sret = Con_GetInt(&nval);
+				if (sret != 0 || nval < 0) continue;
+				//	scanf("%d", &nval);
+				//if (sret != 1 || nval < 0) {
+				//	while (((nval = getchar()) != '\n') && (nval != EOF));
+				//	continue;
+				//}
 				if (c == '1') RunVars.HoldDelayScanCfg[HDSPARAM_MIN] = nval;
 				if (c == '2') RunVars.HoldDelayScanCfg[HDSPARAM_MAX] = nval;
 				if (c == '3') RunVars.HoldDelayScanCfg[HDSPARAM_STEP] = nval;
@@ -1631,7 +1655,7 @@ ReadCfg:
 						if (SockConsole) SendAcqStatusMsg("Initializing TDL chains. This may take a few seconds...");
 						//ret = FERS_InitTDLchains(cnc_handle[cnc], J_cfg.FiberDelayAdjust[cnc]);
 					}
-					ret = FERS_InitTDLchains(cnc_handle[cnc], J_cfg.FiberDelayAdjust[cnc]);
+					ret = FERS_InitTDLchains(cnc_handle[cnc], NULL); // J_cfg.FiberDelayAdjust[cnc]);
 					if (ret != 0) {
 						sprintf(ErrorMsg, "Failure in TDL chain init\n");
 						goto ManageError;

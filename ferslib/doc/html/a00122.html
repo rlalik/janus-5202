@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CAEN FERS Library: TestEvent_t Struct Reference</title>
+<title>CAEN FERS Library: FERS_TDL_ChainInfo_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="caen_logo.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">CAEN FERS Library<span id="projectnumber">&#160;release/v1.3.0 (55527ef5)</span>
+   <div id="projectname">CAEN FERS Library<span id="projectnumber">&#160;release/v1.3.0 (fa48f01b)</span>
    </div>
    <div id="projectbrief">SDK for FERS systems</div>
   </td>
@@ -101,122 +101,170 @@ $(function(){initNavTree('a00122.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
-  <div class="headertitle"><div class="title">TestEvent_t Struct Reference<div class="ingroups"><a class="el" href="a00044.html">FERS Library Structures</a> &raquo; <a class="el" href="a00045.html">Data</a></div></div></div>
+  <div class="headertitle"><div class="title">FERS_TDL_ChainInfo_t Struct Reference<div class="ingroups"><a class="el" href="a00080.html">FERS Library Structures</a> &raquo; <a class="el" href="a00082.html">Board Info</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Test Mode Event data structure.  
+<p>TDL chain information structure.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00026_source.html">FERSlib.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00062_source.html">FERSlib.h</a>&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for TestEvent_t:</div>
+Collaboration diagram for FERS_TDL_ChainInfo_t:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00120.svg" width="98" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00120.svg" width="163" height="218"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a3910478268d5c9fa19ab68084cbe8195" id="r_a3910478268d5c9fa19ab68084cbe8195"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3910478268d5c9fa19ab68084cbe8195">tstamp_us</a></td></tr>
-<tr class="memdesc:a3910478268d5c9fa19ab68084cbe8195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp in us.  <br /></td></tr>
-<tr class="separator:a3910478268d5c9fa19ab68084cbe8195"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad55fb5f524440d8935780ee42b9ab099" id="r_ad55fb5f524440d8935780ee42b9ab099"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad55fb5f524440d8935780ee42b9ab099">trigger_id</a></td></tr>
-<tr class="memdesc:ad55fb5f524440d8935780ee42b9ab099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger ID.  <br /></td></tr>
-<tr class="separator:ad55fb5f524440d8935780ee42b9ab099"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa231dd283544fe9246bd1b9373877ec0" id="r_aa231dd283544fe9246bd1b9373877ec0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa231dd283544fe9246bd1b9373877ec0">nwords</a></td></tr>
-<tr class="memdesc:aa231dd283544fe9246bd1b9373877ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of words.  <br /></td></tr>
-<tr class="separator:aa231dd283544fe9246bd1b9373877ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25e2198100421e35c991b89f3ad80a86" id="r_a25e2198100421e35c991b89f3ad80a86"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25e2198100421e35c991b89f3ad80a86">test_data</a> [4]</td></tr>
-<tr class="memdesc:a25e2198100421e35c991b89f3ad80a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test data words.  <br /></td></tr>
-<tr class="separator:a25e2198100421e35c991b89f3ad80a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada867201db4267c42d610764b42b9525" id="r_ada867201db4267c42d610764b42b9525"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada867201db4267c42d610764b42b9525">Status</a></td></tr>
+<tr class="separator:ada867201db4267c42d610764b42b9525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab778aa69635d57ccf541d8b7e22b664d" id="r_ab778aa69635d57ccf541d8b7e22b664d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab778aa69635d57ccf541d8b7e22b664d">BoardCount</a></td></tr>
+<tr class="separator:ab778aa69635d57ccf541d8b7e22b664d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3812118673e68c4b48f3ebd730ad18cf" id="r_a3812118673e68c4b48f3ebd730ad18cf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3812118673e68c4b48f3ebd730ad18cf">rrt</a></td></tr>
+<tr class="separator:a3812118673e68c4b48f3ebd730ad18cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d7446ebf0e0e9491397d0a8acd198b" id="r_a37d7446ebf0e0e9491397d0a8acd198b"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37d7446ebf0e0e9491397d0a8acd198b">EventCount</a></td></tr>
+<tr class="separator:a37d7446ebf0e0e9491397d0a8acd198b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa520946042817ef97b59854c7ad5fb67" id="r_aa520946042817ef97b59854c7ad5fb67"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa520946042817ef97b59854c7ad5fb67">ByteCount</a></td></tr>
+<tr class="separator:aa520946042817ef97b59854c7ad5fb67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b1c2fef9f68c715320883ddb7c29e9" id="r_a11b1c2fef9f68c715320883ddb7c29e9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11b1c2fef9f68c715320883ddb7c29e9">EventRate</a></td></tr>
+<tr class="separator:a11b1c2fef9f68c715320883ddb7c29e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb5f0180c5e0dff09862fe77e79d9ed9" id="r_aeb5f0180c5e0dff09862fe77e79d9ed9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb5f0180c5e0dff09862fe77e79d9ed9">Mbps</a></td></tr>
+<tr class="separator:aeb5f0180c5e0dff09862fe77e79d9ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Test Mode Event data structure. </p>
+<div class="textblock"><p>TDL chain information structure. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00683">683</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00508">508</a> of file <a class="el" href="a00062_source.html">FERSlib.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a3910478268d5c9fa19ab68084cbe8195" name="a3910478268d5c9fa19ab68084cbe8195"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3910478268d5c9fa19ab68084cbe8195">&#9670;&#160;</a></span>tstamp_us</h2>
+<a id="ada867201db4267c42d610764b42b9525" name="ada867201db4267c42d610764b42b9525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada867201db4267c42d610764b42b9525">&#9670;&#160;</a></span>Status</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double tstamp_us</td>
+          <td class="memname">uint16_t Status</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Chain Status (0=not enumerated, 1=enumerated, ...) </p>
 
-<p>Timestamp in us. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00684">684</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00509">509</a> of file <a class="el" href="a00062_source.html">FERSlib.h</a>.</p>
 
 </div>
 </div>
-<a id="ad55fb5f524440d8935780ee42b9ab099" name="ad55fb5f524440d8935780ee42b9ab099"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad55fb5f524440d8935780ee42b9ab099">&#9670;&#160;</a></span>trigger_id</h2>
+<a id="ab778aa69635d57ccf541d8b7e22b664d" name="ab778aa69635d57ccf541d8b7e22b664d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab778aa69635d57ccf541d8b7e22b664d">&#9670;&#160;</a></span>BoardCount</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t trigger_id</td>
+          <td class="memname">uint16_t BoardCount</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Num of boards in the chain </p>
 
-<p>Trigger ID. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00685">685</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00510">510</a> of file <a class="el" href="a00062_source.html">FERSlib.h</a>.</p>
 
 </div>
 </div>
-<a id="aa231dd283544fe9246bd1b9373877ec0" name="aa231dd283544fe9246bd1b9373877ec0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa231dd283544fe9246bd1b9373877ec0">&#9670;&#160;</a></span>nwords</h2>
+<a id="a3812118673e68c4b48f3ebd730ad18cf" name="a3812118673e68c4b48f3ebd730ad18cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3812118673e68c4b48f3ebd730ad18cf">&#9670;&#160;</a></span>rrt</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t nwords</td>
+          <td class="memname">float rrt</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Number of words. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00686">686</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00511">511</a> of file <a class="el" href="a00062_source.html">FERSlib.h</a>.</p>
 
 </div>
 </div>
-<a id="a25e2198100421e35c991b89f3ad80a86" name="a25e2198100421e35c991b89f3ad80a86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25e2198100421e35c991b89f3ad80a86">&#9670;&#160;</a></span>test_data</h2>
+<a id="a37d7446ebf0e0e9491397d0a8acd198b" name="a37d7446ebf0e0e9491397d0a8acd198b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37d7446ebf0e0e9491397d0a8acd198b">&#9670;&#160;</a></span>EventCount</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t test_data[4]</td>
+          <td class="memname">uint64_t EventCount</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>total number of transferred events </p>
 
-<p>Test data words. </p>
+<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00512">512</a> of file <a class="el" href="a00062_source.html">FERSlib.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00687">687</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+</div>
+</div>
+<a id="aa520946042817ef97b59854c7ad5fb67" name="aa520946042817ef97b59854c7ad5fb67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa520946042817ef97b59854c7ad5fb67">&#9670;&#160;</a></span>ByteCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t ByteCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>total number of transferred bytes </p>
+
+<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00513">513</a> of file <a class="el" href="a00062_source.html">FERSlib.h</a>.</p>
+
+</div>
+</div>
+<a id="a11b1c2fef9f68c715320883ddb7c29e9" name="a11b1c2fef9f68c715320883ddb7c29e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11b1c2fef9f68c715320883ddb7c29e9">&#9670;&#160;</a></span>EventRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float EventRate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Current event rate (cps) </p>
+
+<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00514">514</a> of file <a class="el" href="a00062_source.html">FERSlib.h</a>.</p>
+
+</div>
+</div>
+<a id="aeb5f0180c5e0dff09862fe77e79d9ed9" name="aeb5f0180c5e0dff09862fe77e79d9ed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb5f0180c5e0dff09862fe77e79d9ed9">&#9670;&#160;</a></span>Mbps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mbps</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Current transfer rate (Megabit per second) </p>
+
+<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00515">515</a> of file <a class="el" href="a00062_source.html">FERSlib.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00026_source.html">FERSlib.h</a></li>
+<li><a class="el" href="a00062_source.html">FERSlib.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00122.html">TestEvent_t</a></li>
-    <li class="footer">Generated on Thu Nov 27 2025 15:21:59 for CAEN FERS Library by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="navelem"><a class="el" href="a00122.html">FERS_TDL_ChainInfo_t</a></li>
+    <li class="footer">Generated on Tue Dec 23 2025 15:19:32 for CAEN FERS Library by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -1,9 +1,9 @@
 var topics =
 [
-    [ "FERS Library Structures", "a00044.html", "a00044" ],
-    [ "FERS 520X Board registers", "a00048.html", "a00048" ],
-    [ "FERS 520X Board commands", "a00049.html", "a00049" ],
-    [ "Macros", "a00050.html", "a00050" ],
-    [ "Enumerations", "a00051.html", "a00051" ],
-    [ "API", "a00066.html", "a00066" ]
+    [ "FERS Library Structures", "a00080.html", "a00080" ],
+    [ "FERS 520X Board registers", "a00084.html", "a00084" ],
+    [ "FERS 520X Board commands", "a00085.html", "a00085" ],
+    [ "Macros", "a00086.html", "a00086" ],
+    [ "Enumerations", "a00087.html", "a00087" ],
+    [ "API", "a00102.html", "a00102" ]
 ];

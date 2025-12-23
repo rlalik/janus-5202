@@ -119,7 +119,7 @@
 #define FERSLIB_VERSION_PATCH			0
 #define FERSLIB_RELEASE_NUM				(FERSLIB_VERSION_MAJOR * 10000) + (FERSLIB_VERSION_MINOR * 100) + (FERSLIB_VERSION_PATCH)	/*!< Library release version (int) */
 #define FERSLIB_RELEASE_STRING			FERSLIB_STR(FERSLIB_VERSION_MAJOR) "." FERSLIB_STR(FERSLIB_VERSION_MINOR) "." FERSLIB_STR(FERSLIB_VERSION_PATCH) /*!<Library release version (string) */
-#define FERSLIB_RELEASE_DATE			"28/11/2025"
+#define FERSLIB_RELEASE_DATE			"23/12/2025"
 /*! @} */
 
 #define THROUGHPUT_METER			0		///< Must be 0 in normal operation (can be used to test the data throughput in different points of the readout process)
@@ -370,7 +370,7 @@ typedef enum {
 #define ENERGY_NBIT					14	/*!< Max nbits for PHA (5202) */
 #define TOA_NBIT					16	/*!< Max nbits for ToA (5202) */
 #define TOA_LSB_ns					0.5 /*!< LSB value of ToA in ns (5202) */
-#define TOT_NBIT					9   /*!< Max #bits for ToT (5202) */
+#define TOT_NBIT					9   /*!< Max num of bits for ToT (5202) */
 
 
 // Parameter Options
@@ -812,30 +812,17 @@ extern "C" {
 	// -----------------------------------------------------------------
 	// DNIN: Is it better to have an API to enable both RawData and LimitFileSize
 	//		 and then do the open directly inside the StartAcquisition?
-	///*!
-	//* @ingroup Functions
-	//* @defgroup RawData RawData Saving/Loading
-	//*/
-	///*!
-	// * @brief   Enable the rawdata file saving and set default file name
-	// * @param[in] RawDataEnable		bool to activate rawdata file saving
-	// * @param[in] DataOutputPath	path where rawdata will be saved
-	// * @param[in] RunNumber			number of the current run
-	// * @return						0
-	// * @ingroup RawData
-	//*/
+
 	//CAEN_FERS_DLLAPI int FERS_EnableRawdataWriteFile(uint8_t RawDataEnable, char* DataOutputPath, int RunNumber);
 
-	///*!
-	// * @brief   Enable and set the size limit for rawdata file
-	// * @param[in] LimitSizeEnable		Flag to enable the size limit
-	// * @param[in] MaxSizeRawOutputFile	Maximum size of output file
-	// * @return	 0
-	// * @ingroup RawData
-	//*/
 	//CAEN_FERS_DLLAPI int FERS_EnableLimitRawdataFileSize(uint8_t LimitSizeEnable, float MaxSizeRawOutputFile);
 
 	//CAEN_FERS_DLLAPI int FERS_SetRawdataReadFile(char DataRawFilePath[500], int brd);
+
+	/*!
+	 * @ingroup Functions
+	 * @defgroup RawData RawData Saving/Loading
+	*/
 
 	/*!
 	 * @brief   Open raw data file, to be done before starting the run
@@ -858,7 +845,7 @@ extern "C" {
 	
 	/*!
 	* @brief	Get the clock of the FERS board
-	* @parma[in] handle		board handle
+	* @param[in] handle		board handle
 	* return				Clock period in ns
 	* @ingroup	OC
 	*/
@@ -925,6 +912,7 @@ extern "C" {
 	/*!
      * @brief   Send a sync broadcast command via TDL 
      * @param[in] handle			concentrator handel
+	 * @param[in] DelayAdjust		array with delay adjustments for each TDL chain and node
      * @return						0 in case of success, or a negative error code specified in #FERSLIB_ErrorCodes
      * @ingroup OC
     */
@@ -1466,8 +1454,8 @@ extern "C" {
 	 * @ingroup HV
 	 * @brief				Get the Firmware Version of the high voltage module
 	 *
-	 * @param[out] sernum	Pointer to the get Fimware version
-	 * @param[in] handle	Handle to the FERS device
+	 * @param[out] FWver	Pointer to  Fimware version
+	 * @param[in] handle	Handle to the get FERS device
 	 * @return				0 on success, or a negative error code as defined in #FERSLIB_ErrorCodes
 	 */
 	CAEN_FERS_DLLAPI int FERS_HV_Get_FWVer(int handle, uint32_t* FWver);
@@ -1476,7 +1464,7 @@ extern "C" {
 	 * @ingroup HV
 	 * @brief				Get the serial number of the high voltage module
 	 * 
-	 * @param[out] sernum	Pointer to the Getd serial number
+	 * @param[out] sernum	Pointer to the get serial number
 	 * @param[in] handle	Handle to the FERS device
 	 * @return				0 on success, or a negative error code as defined in #FERSLIB_ErrorCodes
 	 */
@@ -1907,7 +1895,7 @@ extern "C" {
 	 * @ingroup calib
 	 * @brief						Find the source where calibration is stored (if present EEPROM is default)
 	 * 
-	 * @param[in]					Board handle
+	 * @param[in] handle			Board handle
 	 * @return						Source code (0 = flash,  1 = EEPROM)
 	 */
 	CAEN_FERS_DLLAPI int FERS_FindMemThrDest(int handle);

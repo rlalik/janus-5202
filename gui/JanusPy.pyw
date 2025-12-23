@@ -354,6 +354,12 @@ class Open_GUI(Frame):
 
 
 	def CloseAndQuit(self):
+		# Ask before quitting if boards are still connected
+		if cfg.status != sh.ACQSTATUS_DISCONNECTED:
+			res = messagebox.askyesno('Quitting', 'WARNING: An active connection to the boards has been detected. \
+Exiting the program will disconnect the boards and disable the HV (if enabled). Continue?')
+			if res == False: return
+
 		if cfg.status == 4: # JanusC is in Running
 			comm.SendCmd('S')
 			time.sleep(0.1)
@@ -362,7 +368,7 @@ class Open_GUI(Frame):
 		self.stop_thread = True
 		time.sleep(0.1)
 		try: 
-			if self.t.is_alive(): self.t.join()
+			if self.t.is_alive(): self.t.join(timeout=1.0)
 		except: pass
 		if comm.SckConnected and not comm.SckError:
 			comm.SendCmd('q0')
@@ -466,8 +472,9 @@ class Open_GUI(Frame):
 				continue
 			if comm.SckConnected:
 				try: self.Tabs.Mtabs_nb.index('current')
-				except: 
-					time.sleep(100)
+				except:
+					# During shutdown widgets may already be destroyed; don't hang for long.
+					time.sleep(0.1)
 					continue
 				if (list(self.Tabs.Mtabs)[self.Tabs.Mtabs_nb.index('current')] == 'HV_bias'):
 					if enable_hvmon == 0: comm.SendCmd('V1')

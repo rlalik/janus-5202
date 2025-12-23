@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CAEN FERS Library: WaveEvent_t Struct Reference</title>
+<title>CAEN FERS Library: Read sensors temperature</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="caen_logo.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">CAEN FERS Library<span id="projectnumber">&#160;release/v1.3.0 (55527ef5)</span>
+   <div id="projectname">CAEN FERS Library<span id="projectnumber">&#160;release/v1.3.0 (fa48f01b)</span>
    </div>
    <div id="projectbrief">SDK for FERS systems</div>
   </td>
@@ -100,162 +100,163 @@ $(function(){initNavTree('a00110.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Data Fields</a>  </div>
-  <div class="headertitle"><div class="title">WaveEvent_t Struct Reference<div class="ingroups"><a class="el" href="a00044.html">FERS Library Structures</a> &raquo; <a class="el" href="a00045.html">Data</a></div></div></div>
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">Read sensors temperature<div class="ingroups"><a class="el" href="a00102.html">API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Waveform Event data structure.  
- <a href="#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00026_source.html">FERSlib.h</a>&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for WaveEvent_t:</div>
+Collaboration diagram for Read sensors temperature:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00108.svg" width="103" height="195"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00110.svg" width="279" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Data Fields</h2></td></tr>
-<tr class="memitem:a3910478268d5c9fa19ab68084cbe8195" id="r_a3910478268d5c9fa19ab68084cbe8195"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3910478268d5c9fa19ab68084cbe8195">tstamp_us</a></td></tr>
-<tr class="memdesc:a3910478268d5c9fa19ab68084cbe8195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp in us.  <br /></td></tr>
-<tr class="separator:a3910478268d5c9fa19ab68084cbe8195"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad55fb5f524440d8935780ee42b9ab099" id="r_ad55fb5f524440d8935780ee42b9ab099"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad55fb5f524440d8935780ee42b9ab099">trigger_id</a></td></tr>
-<tr class="memdesc:ad55fb5f524440d8935780ee42b9ab099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger ID.  <br /></td></tr>
-<tr class="separator:ad55fb5f524440d8935780ee42b9ab099"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa621ccbc8c262d784aede40ce31a7f98" id="r_aa621ccbc8c262d784aede40ce31a7f98"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa621ccbc8c262d784aede40ce31a7f98">ns</a></td></tr>
-<tr class="separator:aa621ccbc8c262d784aede40ce31a7f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7f0c94fae796814461ebb9659b5aa9b" id="r_aa7f0c94fae796814461ebb9659b5aa9b"><td class="memItemLeft" align="right" valign="top">uint16_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7f0c94fae796814461ebb9659b5aa9b">wave_hg</a></td></tr>
-<tr class="memdesc:aa7f0c94fae796814461ebb9659b5aa9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">High-gain waveform samples.  <br /></td></tr>
-<tr class="separator:aa7f0c94fae796814461ebb9659b5aa9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbeb506076c4669d81670e7d5f963550" id="r_abbeb506076c4669d81670e7d5f963550"><td class="memItemLeft" align="right" valign="top">uint16_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbeb506076c4669d81670e7d5f963550">wave_lg</a></td></tr>
-<tr class="memdesc:abbeb506076c4669d81670e7d5f963550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low-gain waveform samples.  <br /></td></tr>
-<tr class="separator:abbeb506076c4669d81670e7d5f963550"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02f87a4018ffd8005831ce3b4a2d1045" id="r_a02f87a4018ffd8005831ce3b4a2d1045"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02f87a4018ffd8005831ce3b4a2d1045">dig_probes</a></td></tr>
-<tr class="memdesc:a02f87a4018ffd8005831ce3b4a2d1045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Digital probes samples.  <br /></td></tr>
-<tr class="separator:a02f87a4018ffd8005831ce3b4a2d1045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga1d8e0f53b42ca3c0f5053a52f903bcd4" id="r_ga1d8e0f53b42ca3c0f5053a52f903bcd4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1d8e0f53b42ca3c0f5053a52f903bcd4">FERS_Get_TDC0_Temp</a> (int handle, float *temp)</td></tr>
+<tr class="memdesc:ga1d8e0f53b42ca3c0f5053a52f903bcd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the temperature from picoTDC0 (on the board)  <br /></td></tr>
+<tr class="separator:ga1d8e0f53b42ca3c0f5053a52f903bcd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga91816f79b266c84fb9ccc2441fcdc2a4" id="r_ga91816f79b266c84fb9ccc2441fcdc2a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga91816f79b266c84fb9ccc2441fcdc2a4">FERS_Get_TDC1_Temp</a> (int handle, float *temp)</td></tr>
+<tr class="memdesc:ga91816f79b266c84fb9ccc2441fcdc2a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the temperature from picoTDC1 (on the mezzanine)  <br /></td></tr>
+<tr class="separator:ga91816f79b266c84fb9ccc2441fcdc2a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga21ff155d9d40802b65d0f048f139ac50" id="r_ga21ff155d9d40802b65d0f048f139ac50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga21ff155d9d40802b65d0f048f139ac50">FERS_Get_FPGA_Temp</a> (int handle, float *temp)</td></tr>
+<tr class="memdesc:ga21ff155d9d40802b65d0f048f139ac50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get FPGA die temperature.  <br /></td></tr>
+<tr class="separator:ga21ff155d9d40802b65d0f048f139ac50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39c91201630a85166def57585763a9fd" id="r_ga39c91201630a85166def57585763a9fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga39c91201630a85166def57585763a9fd">FERS_Get_Board_Temp</a> (int handle, float *temp)</td></tr>
+<tr class="memdesc:ga39c91201630a85166def57585763a9fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Board temperature, between PIC and FPGA.  <br /></td></tr>
+<tr class="separator:ga39c91201630a85166def57585763a9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Waveform Event data structure. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00614">614</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-</div><h2 class="groupheader">Field Documentation</h2>
-<a id="a3910478268d5c9fa19ab68084cbe8195" name="a3910478268d5c9fa19ab68084cbe8195"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3910478268d5c9fa19ab68084cbe8195">&#9670;&#160;</a></span>tstamp_us</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga1d8e0f53b42ca3c0f5053a52f903bcd4" name="ga1d8e0f53b42ca3c0f5053a52f903bcd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d8e0f53b42ca3c0f5053a52f903bcd4">&#9670;&#160;</a></span>FERS_Get_TDC0_Temp()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double tstamp_us</td>
+          <td class="memname">int FERS_Get_TDC0_Temp </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>temp</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Timestamp in us. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00615">615</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p>Get the temperature from picoTDC0 (on the board) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">temp</td><td>TDC temperature in Celsiuse </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to the FERS device </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, or a negative error code as defined in <a class="el" href="a00087.html#ga3b7f684434356c7a07c9663233e2377c" title="Error codes.">FERSLIB_ErrorCodes</a> </dd></dl>
 
 </div>
 </div>
-<a id="ad55fb5f524440d8935780ee42b9ab099" name="ad55fb5f524440d8935780ee42b9ab099"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad55fb5f524440d8935780ee42b9ab099">&#9670;&#160;</a></span>trigger_id</h2>
+<a id="ga91816f79b266c84fb9ccc2441fcdc2a4" name="ga91816f79b266c84fb9ccc2441fcdc2a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga91816f79b266c84fb9ccc2441fcdc2a4">&#9670;&#160;</a></span>FERS_Get_TDC1_Temp()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t trigger_id</td>
+          <td class="memname">int FERS_Get_TDC1_Temp </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>temp</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Trigger ID. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00616">616</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p>Get the temperature from picoTDC1 (on the mezzanine) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">temp</td><td>TDC temperature in Celsius </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to the FERS device </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, or a negative error code as defined in <a class="el" href="a00087.html#ga3b7f684434356c7a07c9663233e2377c" title="Error codes.">FERSLIB_ErrorCodes</a> </dd></dl>
 
 </div>
 </div>
-<a id="aa621ccbc8c262d784aede40ce31a7f98" name="aa621ccbc8c262d784aede40ce31a7f98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa621ccbc8c262d784aede40ce31a7f98">&#9670;&#160;</a></span>ns</h2>
+<a id="ga21ff155d9d40802b65d0f048f139ac50" name="ga21ff155d9d40802b65d0f048f139ac50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga21ff155d9d40802b65d0f048f139ac50">&#9670;&#160;</a></span>FERS_Get_FPGA_Temp()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t ns</td>
+          <td class="memname">int FERS_Get_FPGA_Temp </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>temp</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00617">617</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p>Get FPGA die temperature. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">temp</td><td>FPGA temperature in Celsius </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>device handle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 </dd></dl>
 
 </div>
 </div>
-<a id="aa7f0c94fae796814461ebb9659b5aa9b" name="aa7f0c94fae796814461ebb9659b5aa9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7f0c94fae796814461ebb9659b5aa9b">&#9670;&#160;</a></span>wave_hg</h2>
+<a id="ga39c91201630a85166def57585763a9fd" name="ga39c91201630a85166def57585763a9fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga39c91201630a85166def57585763a9fd">&#9670;&#160;</a></span>FERS_Get_Board_Temp()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t* wave_hg</td>
+          <td class="memname">int FERS_Get_Board_Temp </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>High-gain waveform samples. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00618">618</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="abbeb506076c4669d81670e7d5f963550" name="abbeb506076c4669d81670e7d5f963550"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbeb506076c4669d81670e7d5f963550">&#9670;&#160;</a></span>wave_lg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">uint16_t* wave_lg</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>temp</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Low-gain waveform samples. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00619">619</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="a02f87a4018ffd8005831ce3b4a2d1045" name="a02f87a4018ffd8005831ce3b4a2d1045"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02f87a4018ffd8005831ce3b4a2d1045">&#9670;&#160;</a></span>dig_probes</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t* dig_probes</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Digital probes samples. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00620">620</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p>Get Board temperature, between PIC and FPGA. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">temp</td><td>PIC board temperature in Celsius </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>device handle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 </dd></dl>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00026_source.html">FERSlib.h</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00110.html">WaveEvent_t</a></li>
-    <li class="footer">Generated on Thu Nov 27 2025 15:21:59 for CAEN FERS Library by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Dec 23 2025 15:19:32 for CAEN FERS Library by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

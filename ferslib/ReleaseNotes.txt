@@ -5,16 +5,17 @@
 *************************************************************************************************************************
 
 -------------------------------------------------------------------------------------------------------------------------
-Release 1.3.0 - 28/11/25
+Release 1.3.0 - 23/12/25
 -------------------------------------------------------------------------------------------------------------------------
 - Added decoding for TrefTstamp in SpectTiming mode
 - Updated FERS_GetParam to accept const char* for parameter param_name
-- All "mask" parameters are now returned as decimal format instead of hexadecimal, in FERS_GetParam function
+- Changed all "mask" parameters in FERS_GetParam to return decimal format instead of hexadecimal
 - Improved demo configuration file parsing
-- Bug fix on reading timing list in SepctTiming mode
-- Bug fix on setting TestPulsePreamp
-- Bug fix on analog probes PREAMP_LG and PREAM_HG
-- Bug fix in TestPulseDestination for NONE case
+- Bug fix in reading timing list in SepctTiming mode
+- Bug fix in setting TestPulsePreamp
+- Bug fix in PREAMP_LG and PREAM_HG analog probes
+- Bug fix in TestPulseDestination when set to NONE
+- Bug fix in FERS_IsOpen function
 
 -------------------------------------------------------------------------------------------------------------------------
 Release 1.2.3 - 07/10/25

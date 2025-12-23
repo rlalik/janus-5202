@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CAEN FERS Library: ListEvent_t Struct Reference</title>
+<title>CAEN FERS Library: Firmware upgrade</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="caen_logo.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">CAEN FERS Library<span id="projectnumber">&#160;release/v1.3.0 (55527ef5)</span>
+   <div id="projectname">CAEN FERS Library<span id="projectnumber">&#160;release/v1.3.0 (fa48f01b)</span>
    </div>
    <div id="projectbrief">SDK for FERS systems</div>
   </td>
@@ -100,333 +100,171 @@ $(function(){initNavTree('a00114.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Data Fields</a>  </div>
-  <div class="headertitle"><div class="title">ListEvent_t Struct Reference<div class="ingroups"><a class="el" href="a00044.html">FERS Library Structures</a> &raquo; <a class="el" href="a00045.html">Data</a></div></div></div>
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">Firmware upgrade<div class="ingroups"><a class="el" href="a00102.html">API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>List Event data structure for timing mode.  
- <a href="#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00026_source.html">FERSlib.h</a>&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for ListEvent_t:</div>
+Collaboration diagram for Firmware upgrade:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00112.svg" width="110" height="374"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00114.svg" width="232" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Data Fields</h2></td></tr>
-<tr class="memitem:a3910478268d5c9fa19ab68084cbe8195" id="r_a3910478268d5c9fa19ab68084cbe8195"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3910478268d5c9fa19ab68084cbe8195">tstamp_us</a></td></tr>
-<tr class="memdesc:a3910478268d5c9fa19ab68084cbe8195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp in microseconds.  <br /></td></tr>
-<tr class="separator:a3910478268d5c9fa19ab68084cbe8195"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a384da401a0e80ab9d1fc8674dac42675" id="r_a384da401a0e80ab9d1fc8674dac42675"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a384da401a0e80ab9d1fc8674dac42675">Tref_tstamp</a></td></tr>
-<tr class="memdesc:a384da401a0e80ab9d1fc8674dac42675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp of reference time signal (5202 only)  <br /></td></tr>
-<tr class="separator:a384da401a0e80ab9d1fc8674dac42675"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0fcb8217ed82b6bd7f7d5d23d7912a3" id="r_af0fcb8217ed82b6bd7f7d5d23d7912a3"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0fcb8217ed82b6bd7f7d5d23d7912a3">tstamp_clk</a></td></tr>
-<tr class="memdesc:af0fcb8217ed82b6bd7f7d5d23d7912a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp in LSB (5203 only)  <br /></td></tr>
-<tr class="separator:af0fcb8217ed82b6bd7f7d5d23d7912a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad55fb5f524440d8935780ee42b9ab099" id="r_ad55fb5f524440d8935780ee42b9ab099"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad55fb5f524440d8935780ee42b9ab099">trigger_id</a></td></tr>
-<tr class="memdesc:ad55fb5f524440d8935780ee42b9ab099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger ID.  <br /></td></tr>
-<tr class="separator:ad55fb5f524440d8935780ee42b9ab099"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33d602c2d56bd128ee277e1d8a950028" id="r_a33d602c2d56bd128ee277e1d8a950028"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33d602c2d56bd128ee277e1d8a950028">nhits</a></td></tr>
-<tr class="memdesc:a33d602c2d56bd128ee277e1d8a950028"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of hits.  <br /></td></tr>
-<tr class="separator:a33d602c2d56bd128ee277e1d8a950028"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08b0b848573b5a84d1dbf497d80e4bc7" id="r_a08b0b848573b5a84d1dbf497d80e4bc7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08b0b848573b5a84d1dbf497d80e4bc7">header1</a> [8]</td></tr>
-<tr class="memdesc:a08b0b848573b5a84d1dbf497d80e4bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">PicoTDC header 1.  <br /></td></tr>
-<tr class="separator:a08b0b848573b5a84d1dbf497d80e4bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80a34df41151a9744a043bcc478a1d75" id="r_a80a34df41151a9744a043bcc478a1d75"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80a34df41151a9744a043bcc478a1d75">header2</a> [8]</td></tr>
-<tr class="memdesc:a80a34df41151a9744a043bcc478a1d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">PicoTDC header 2.  <br /></td></tr>
-<tr class="separator:a80a34df41151a9744a043bcc478a1d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaad59b141738e883b58b85f06d51e640" id="r_aaad59b141738e883b58b85f06d51e640"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaad59b141738e883b58b85f06d51e640">ow_trailer</a></td></tr>
-<tr class="memdesc:aaad59b141738e883b58b85f06d51e640"><td class="mdescLeft">&#160;</td><td class="mdescRight">PicoTDC one-word trailer.  <br /></td></tr>
-<tr class="separator:aaad59b141738e883b58b85f06d51e640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83cf4301d95e7c900f00da716e5a218a" id="r_a83cf4301d95e7c900f00da716e5a218a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83cf4301d95e7c900f00da716e5a218a">trailer</a> [8]</td></tr>
-<tr class="memdesc:a83cf4301d95e7c900f00da716e5a218a"><td class="mdescLeft">&#160;</td><td class="mdescRight">PicoTDC trailer.  <br /></td></tr>
-<tr class="separator:a83cf4301d95e7c900f00da716e5a218a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab28f16da18db32effb88e9ac933002c7" id="r_ab28f16da18db32effb88e9ac933002c7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab28f16da18db32effb88e9ac933002c7">channel</a> [2048]</td></tr>
-<tr class="memdesc:ab28f16da18db32effb88e9ac933002c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of channels.  <br /></td></tr>
-<tr class="separator:ab28f16da18db32effb88e9ac933002c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1df53d16c4f89c3b667f41e3126c2a6" id="r_ac1df53d16c4f89c3b667f41e3126c2a6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1df53d16c4f89c3b667f41e3126c2a6">edge</a> [2048]</td></tr>
-<tr class="memdesc:ac1df53d16c4f89c3b667f41e3126c2a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of associated edges.  <br /></td></tr>
-<tr class="separator:ac1df53d16c4f89c3b667f41e3126c2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa88140239d79f6e59ee5b4f441663f8" id="r_afa88140239d79f6e59ee5b4f441663f8"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa88140239d79f6e59ee5b4f441663f8">tstamp</a> [2048]</td></tr>
-<tr class="memdesc:afa88140239d79f6e59ee5b4f441663f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of ToA in LSB (5202 only)  <br /></td></tr>
-<tr class="separator:afa88140239d79f6e59ee5b4f441663f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9872d4fcb4dc00f7eb8296a31a19ce0b" id="r_a9872d4fcb4dc00f7eb8296a31a19ce0b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9872d4fcb4dc00f7eb8296a31a19ce0b">ToA</a> [2048]</td></tr>
-<tr class="memdesc:a9872d4fcb4dc00f7eb8296a31a19ce0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of ToA in LSB (other board)  <br /></td></tr>
-<tr class="separator:a9872d4fcb4dc00f7eb8296a31a19ce0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0762e8aff528eecbaabce8dcb0978e6" id="r_ab0762e8aff528eecbaabce8dcb0978e6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0762e8aff528eecbaabce8dcb0978e6">ToT</a> [2048]</td></tr>
-<tr class="memdesc:ab0762e8aff528eecbaabce8dcb0978e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of ToT in LSB.  <br /></td></tr>
-<tr class="separator:ab0762e8aff528eecbaabce8dcb0978e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gaebd3a6f3822c26b8e73510caa048d9ec" id="r_gaebd3a6f3822c26b8e73510caa048d9ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaebd3a6f3822c26b8e73510caa048d9ec">FERS_FirmwareUpgrade</a> (int handle, char filen[200], void(*ptr)(char *msg, int progress))</td></tr>
+<tr class="memdesc:gaebd3a6f3822c26b8e73510caa048d9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upgrade the firmware of the board.  <br /></td></tr>
+<tr class="separator:gaebd3a6f3822c26b8e73510caa048d9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d444e30e6a601058b2889b341d7640c" id="r_ga2d444e30e6a601058b2889b341d7640c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2d444e30e6a601058b2889b341d7640c">FERS_FirmwareBootApplication_ethusb</a> (int handle)</td></tr>
+<tr class="memdesc:ga2d444e30e6a601058b2889b341d7640c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reboot the firmware application via Ethernet/USB.  <br /></td></tr>
+<tr class="separator:ga2d444e30e6a601058b2889b341d7640c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f24621451f961ee40483619229e6ce0" id="r_ga3f24621451f961ee40483619229e6ce0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3f24621451f961ee40483619229e6ce0">FERS_FirmwareBootApplication_tdl</a> (int *handle)</td></tr>
+<tr class="memdesc:ga3f24621451f961ee40483619229e6ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reboot the firmware application via TDL.  <br /></td></tr>
+<tr class="separator:ga3f24621451f961ee40483619229e6ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31117e38b1252a434aefb09644bd7a97" id="r_ga31117e38b1252a434aefb09644bd7a97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga31117e38b1252a434aefb09644bd7a97">FERS_CheckBootloaderVersion</a> (int handle, int *isInBootloader, uint32_t *version, uint32_t *release)</td></tr>
+<tr class="memdesc:ga31117e38b1252a434aefb09644bd7a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the FPGA is in "bootloader mode" and read the bootloader version.  <br /></td></tr>
+<tr class="separator:ga31117e38b1252a434aefb09644bd7a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>List Event data structure for timing mode. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00627">627</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-</div><h2 class="groupheader">Field Documentation</h2>
-<a id="a3910478268d5c9fa19ab68084cbe8195" name="a3910478268d5c9fa19ab68084cbe8195"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3910478268d5c9fa19ab68084cbe8195">&#9670;&#160;</a></span>tstamp_us</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gaebd3a6f3822c26b8e73510caa048d9ec" name="gaebd3a6f3822c26b8e73510caa048d9ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaebd3a6f3822c26b8e73510caa048d9ec">&#9670;&#160;</a></span>FERS_FirmwareUpgrade()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double tstamp_us</td>
+          <td class="memname">int FERS_FirmwareUpgrade </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>filen</em></span>[200], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*</td>          <td class="paramname"><span class="paramname"><em>ptr&#160;</em></span>)(char *msg, int progress)&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Timestamp in microseconds. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00628">628</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p>Upgrade the firmware of the board. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Board handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filen</td><td>Firmware file name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>Callback function to report progress (message and progress percentage) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, or a negative error code as defined in <a class="el" href="a00087.html#ga3b7f684434356c7a07c9663233e2377c" title="Error codes.">FERSLIB_ErrorCodes</a> </dd></dl>
 
 </div>
 </div>
-<a id="a384da401a0e80ab9d1fc8674dac42675" name="a384da401a0e80ab9d1fc8674dac42675"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a384da401a0e80ab9d1fc8674dac42675">&#9670;&#160;</a></span>Tref_tstamp</h2>
+<a id="ga2d444e30e6a601058b2889b341d7640c" name="ga2d444e30e6a601058b2889b341d7640c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d444e30e6a601058b2889b341d7640c">&#9670;&#160;</a></span>FERS_FirmwareBootApplication_ethusb()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t Tref_tstamp</td>
+          <td class="memname">int FERS_FirmwareBootApplication_ethusb </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>handle</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Timestamp of reference time signal (5202 only) </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00629">629</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p>Reboot the firmware application via Ethernet/USB. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Board handle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, or a negative error code as defined in <a class="el" href="a00087.html#ga3b7f684434356c7a07c9663233e2377c" title="Error codes.">FERSLIB_ErrorCodes</a> </dd></dl>
 
 </div>
 </div>
-<a id="af0fcb8217ed82b6bd7f7d5d23d7912a3" name="af0fcb8217ed82b6bd7f7d5d23d7912a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0fcb8217ed82b6bd7f7d5d23d7912a3">&#9670;&#160;</a></span>tstamp_clk</h2>
+<a id="ga3f24621451f961ee40483619229e6ce0" name="ga3f24621451f961ee40483619229e6ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f24621451f961ee40483619229e6ce0">&#9670;&#160;</a></span>FERS_FirmwareBootApplication_tdl()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t tstamp_clk</td>
+          <td class="memname">int FERS_FirmwareBootApplication_tdl </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>handle</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Timestamp in LSB (5203 only) </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00630">630</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p>Reboot the firmware application via TDL. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Array of board handles </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, or a negative error code as defined in <a class="el" href="a00087.html#ga3b7f684434356c7a07c9663233e2377c" title="Error codes.">FERSLIB_ErrorCodes</a> </dd></dl>
 
 </div>
 </div>
-<a id="ad55fb5f524440d8935780ee42b9ab099" name="ad55fb5f524440d8935780ee42b9ab099"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad55fb5f524440d8935780ee42b9ab099">&#9670;&#160;</a></span>trigger_id</h2>
+<a id="ga31117e38b1252a434aefb09644bd7a97" name="ga31117e38b1252a434aefb09644bd7a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31117e38b1252a434aefb09644bd7a97">&#9670;&#160;</a></span>FERS_CheckBootloaderVersion()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t trigger_id</td>
+          <td class="memname">int FERS_CheckBootloaderVersion </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Trigger ID. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00631">631</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="a33d602c2d56bd128ee277e1d8a950028" name="a33d602c2d56bd128ee277e1d8a950028"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33d602c2d56bd128ee277e1d8a950028">&#9670;&#160;</a></span>nhits</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">uint16_t nhits</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>isInBootloader</em></span>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Number of hits. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00632">632</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="a08b0b848573b5a84d1dbf497d80e4bc7" name="a08b0b848573b5a84d1dbf497d80e4bc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08b0b848573b5a84d1dbf497d80e4bc7">&#9670;&#160;</a></span>header1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">uint32_t header1[8]</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *</td>          <td class="paramname"><span class="paramname"><em>version</em></span>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>PicoTDC header 1. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00633">633</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="a80a34df41151a9744a043bcc478a1d75" name="a80a34df41151a9744a043bcc478a1d75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80a34df41151a9744a043bcc478a1d75">&#9670;&#160;</a></span>header2</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">uint32_t header2[8]</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *</td>          <td class="paramname"><span class="paramname"><em>release</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>PicoTDC header 2. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00634">634</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="aaad59b141738e883b58b85f06d51e640" name="aaad59b141738e883b58b85f06d51e640"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaad59b141738e883b58b85f06d51e640">&#9670;&#160;</a></span>ow_trailer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t ow_trailer</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>PicoTDC one-word trailer. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00635">635</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p>Check if the FPGA is in "bootloader mode" and read the bootloader version. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">isInBootloader</td><td>Pointer to the bootloader state (1 if in bootloader, 0 otherwise) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">version</td><td>Pointer to the bootloader version </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">release</td><td>Pointer to the bootloader release number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Board handle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, or a negative error code as defined in <a class="el" href="a00087.html#ga3b7f684434356c7a07c9663233e2377c" title="Error codes.">FERSLIB_ErrorCodes</a> </dd></dl>
 
 </div>
 </div>
-<a id="a83cf4301d95e7c900f00da716e5a218a" name="a83cf4301d95e7c900f00da716e5a218a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83cf4301d95e7c900f00da716e5a218a">&#9670;&#160;</a></span>trailer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t trailer[8]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>PicoTDC trailer. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00636">636</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="ab28f16da18db32effb88e9ac933002c7" name="ab28f16da18db32effb88e9ac933002c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab28f16da18db32effb88e9ac933002c7">&#9670;&#160;</a></span>channel</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t channel[2048]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>List of channels. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00637">637</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="ac1df53d16c4f89c3b667f41e3126c2a6" name="ac1df53d16c4f89c3b667f41e3126c2a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1df53d16c4f89c3b667f41e3126c2a6">&#9670;&#160;</a></span>edge</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t edge[2048]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>List of associated edges. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00638">638</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="afa88140239d79f6e59ee5b4f441663f8" name="afa88140239d79f6e59ee5b4f441663f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa88140239d79f6e59ee5b4f441663f8">&#9670;&#160;</a></span>tstamp</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t tstamp[2048]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>List of ToA in LSB (5202 only) </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00639">639</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="a9872d4fcb4dc00f7eb8296a31a19ce0b" name="a9872d4fcb4dc00f7eb8296a31a19ce0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9872d4fcb4dc00f7eb8296a31a19ce0b">&#9670;&#160;</a></span>ToA</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t ToA[2048]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>List of ToA in LSB (other board) </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00640">640</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="ab0762e8aff528eecbaabce8dcb0978e6" name="ab0762e8aff528eecbaabce8dcb0978e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0762e8aff528eecbaabce8dcb0978e6">&#9670;&#160;</a></span>ToT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t ToT[2048]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>List of ToT in LSB. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00641">641</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00026_source.html">FERSlib.h</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00114.html">ListEvent_t</a></li>
-    <li class="footer">Generated on Thu Nov 27 2025 15:21:58 for CAEN FERS Library by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Dec 23 2025 15:19:32 for CAEN FERS Library by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

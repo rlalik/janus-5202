@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CAEN FERS Library: A5256 macros</title>
+<title>CAEN FERS Library: FERS_config.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="caen_logo.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">CAEN FERS Library<span id="projectnumber">&#160;release/v1.3.0 (55527ef5)</span>
+   <div id="projectname">CAEN FERS Library<span id="projectnumber">&#160;release/v1.3.0 (fa48f01b)</span>
    </div>
    <div id="projectbrief">SDK for FERS systems</div>
   </td>
@@ -100,280 +100,100 @@ $(function(){initNavTree('a00065.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
-  <div class="headertitle"><div class="title">A5256 macros<div class="ingroups"><a class="el" href="a00050.html">Macros</a></div></div></div>
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">FERS_config.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>A5256 macros.  
-<a href="#details">More...</a></p>
-<div class="dynheader">
-Collaboration diagram for A5256 macros:</div>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00062_source.html">FERSlib.h</a>&quot;</code><br />
+<code>#include &quot;FERS_MultiPlatform.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00071_source.html">FERS_Registers_520X.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00068_source.html">FERS_Registers_5215.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for FERS_config.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00065.svg" width="228" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00066.svg" width="948" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
+</div>
+<p><a href="a00065_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00162.html">Config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FERS configuration parameters structure (lib + board)  <a href="a00162.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga45ee57f03b88e5eeb83030da20a70e16" id="r_ga45ee57f03b88e5eeb83030da20a70e16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga45ee57f03b88e5eeb83030da20a70e16">A5256_CH0_POSITIVE</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memdesc:ga45ee57f03b88e5eeb83030da20a70e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">CH0 positive polarity.  <br /></td></tr>
-<tr class="separator:ga45ee57f03b88e5eeb83030da20a70e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga32eb54b2ac8a33ed8d4ebc80f1be4d5f" id="r_ga32eb54b2ac8a33ed8d4ebc80f1be4d5f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga32eb54b2ac8a33ed8d4ebc80f1be4d5f">A5256_CH0_NEGATIVE</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memdesc:ga32eb54b2ac8a33ed8d4ebc80f1be4d5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">CH0 negative polarity.  <br /></td></tr>
-<tr class="separator:ga32eb54b2ac8a33ed8d4ebc80f1be4d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga936789237cd3cbbdf666776351ce9864" id="r_ga936789237cd3cbbdf666776351ce9864"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga936789237cd3cbbdf666776351ce9864">A5256_CH0_DUAL</a>&#160;&#160;&#160;2</td></tr>
-<tr class="memdesc:ga936789237cd3cbbdf666776351ce9864"><td class="mdescLeft">&#160;</td><td class="mdescRight">CH0 dual polarity.  <br /></td></tr>
-<tr class="separator:ga936789237cd3cbbdf666776351ce9864"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9526b983fa6940d208553aae6e8bb11c" id="r_ga9526b983fa6940d208553aae6e8bb11c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9526b983fa6940d208553aae6e8bb11c">ADAPTER_NONE</a>&#160;&#160;&#160;0x0000</td></tr>
-<tr class="memdesc:ga9526b983fa6940d208553aae6e8bb11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">No adapter.  <br /></td></tr>
-<tr class="separator:ga9526b983fa6940d208553aae6e8bb11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabee7c646315aaf8a6a11b646de67ebec" id="r_gabee7c646315aaf8a6a11b646de67ebec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabee7c646315aaf8a6a11b646de67ebec">ADAPTER_A5255</a>&#160;&#160;&#160;0x0000</td></tr>
-<tr class="memdesc:gabee7c646315aaf8a6a11b646de67ebec"><td class="mdescLeft">&#160;</td><td class="mdescRight">A5255 is just a mechanical adapter (same as NONE)  <br /></td></tr>
-<tr class="separator:gabee7c646315aaf8a6a11b646de67ebec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga752b57c2d19a35d312b1de8de44b2157" id="r_ga752b57c2d19a35d312b1de8de44b2157"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga752b57c2d19a35d312b1de8de44b2157">ADAPTER_A5256</a>&#160;&#160;&#160;0x0002</td></tr>
-<tr class="memdesc:ga752b57c2d19a35d312b1de8de44b2157"><td class="mdescLeft">&#160;</td><td class="mdescRight">16+1 ch discriminator with programmable thresholds  <br /></td></tr>
-<tr class="separator:ga752b57c2d19a35d312b1de8de44b2157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab71dea992788ec42dd8b94f8ea6140bc" id="r_gab71dea992788ec42dd8b94f8ea6140bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab71dea992788ec42dd8b94f8ea6140bc">ADAPTER_A5256_REV0_POS</a>&#160;&#160;&#160;0x0100</td></tr>
-<tr class="memdesc:gab71dea992788ec42dd8b94f8ea6140bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proto0 of A5256 used with positive signals (discontinued)  <br /></td></tr>
-<tr class="separator:gab71dea992788ec42dd8b94f8ea6140bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5f408440224159cc88dfd39eb271a932" id="r_ga5f408440224159cc88dfd39eb271a932"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5f408440224159cc88dfd39eb271a932">ADAPTER_A5256_REV0_NEG</a>&#160;&#160;&#160;0x0101</td></tr>
-<tr class="memdesc:ga5f408440224159cc88dfd39eb271a932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proto0 of A5256 used with negative signals (discontinued)  <br /></td></tr>
-<tr class="separator:ga5f408440224159cc88dfd39eb271a932"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1fa2460e32327ade49189c95740bc1b5" id="r_ga1fa2460e32327ade49189c95740bc1b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1fa2460e32327ade49189c95740bc1b5">NC</a>&#160;&#160;&#160;-1</td></tr>
-<tr class="separator:ga1fa2460e32327ade49189c95740bc1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6c2876a9609215113a75cb76e6786149" id="r_ga6c2876a9609215113a75cb76e6786149"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6c2876a9609215113a75cb76e6786149">A5256_DAC_LSB</a>&#160;&#160;&#160;((float)2500/4095)</td></tr>
-<tr class="memdesc:ga6c2876a9609215113a75cb76e6786149"><td class="mdescLeft">&#160;</td><td class="mdescRight">LSB of the threshold in mV.  <br /></td></tr>
-<tr class="separator:ga6c2876a9609215113a75cb76e6786149"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga39bcae8bae49acd7cc4014f20abaf988" id="r_ga39bcae8bae49acd7cc4014f20abaf988"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga39bcae8bae49acd7cc4014f20abaf988">A5256_mV_to_DAC</a>(mV)</td></tr>
-<tr class="memdesc:ga39bcae8bae49acd7cc4014f20abaf988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert Threshold from mV into DAC LSB.  <br /></td></tr>
-<tr class="separator:ga39bcae8bae49acd7cc4014f20abaf988"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5ee8ba218977a8dfb28c549e3d32f841" id="r_ga5ee8ba218977a8dfb28c549e3d32f841"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5ee8ba218977a8dfb28c549e3d32f841">A5256_DAC_to_mV</a>(lsb)</td></tr>
-<tr class="memdesc:ga5ee8ba218977a8dfb28c549e3d32f841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert Threshold from DAC LSB to mV.  <br /></td></tr>
-<tr class="separator:ga5ee8ba218977a8dfb28c549e3d32f841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ed7bffb1277ae0c64e9b886ace75b5" id="r_a49ed7bffb1277ae0c64e9b886ace75b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49ed7bffb1277ae0c64e9b886ace75b5">_FERSCFG_H</a></td></tr>
+<tr class="separator:a49ed7bffb1277ae0c64e9b886ace75b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6242a25f9d996f0cc4f4cdb911218b75" id="r_a6242a25f9d996f0cc4f4cdb911218b75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6242a25f9d996f0cc4f4cdb911218b75">ARRAY_SIZE</a>(x)</td></tr>
+<tr class="separator:a6242a25f9d996f0cc4f4cdb911218b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a233846bd921de6b8f21f23de21039f92" id="r_a233846bd921de6b8f21f23de21039f92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00162.html">Config_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a233846bd921de6b8f21f23de21039f92">FERScfg</a> [128]</td></tr>
+<tr class="separator:a233846bd921de6b8f21f23de21039f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>A5256 macros. </p>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga45ee57f03b88e5eeb83030da20a70e16" name="ga45ee57f03b88e5eeb83030da20a70e16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga45ee57f03b88e5eeb83030da20a70e16">&#9670;&#160;</a></span>A5256_CH0_POSITIVE</h2>
+<a id="a49ed7bffb1277ae0c64e9b886ace75b5" name="a49ed7bffb1277ae0c64e9b886ace75b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ed7bffb1277ae0c64e9b886ace75b5">&#9670;&#160;</a></span>_FERSCFG_H</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define A5256_CH0_POSITIVE&#160;&#160;&#160;0</td>
+          <td class="memname">#define _FERSCFG_H</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>CAEN SpA - Front End Division Via Vetraia, 11 - 55049 - Viareggio ITALY +390594388398 - www.caen.it </p><dl class="section note"><dt>Note</dt><dd>TERMS OF USE: This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. The user relies on the software, documentation and results solely at his own risk. </dd></dl>
 
-<p>CH0 positive polarity. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00697">697</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00065_source.html#l00018">18</a> of file <a class="el" href="a00065_source.html">FERS_config.h</a>.</p>
 
 </div>
 </div>
-<a id="ga32eb54b2ac8a33ed8d4ebc80f1be4d5f" name="ga32eb54b2ac8a33ed8d4ebc80f1be4d5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga32eb54b2ac8a33ed8d4ebc80f1be4d5f">&#9670;&#160;</a></span>A5256_CH0_NEGATIVE</h2>
+<a id="a6242a25f9d996f0cc4f4cdb911218b75" name="a6242a25f9d996f0cc4f4cdb911218b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6242a25f9d996f0cc4f4cdb911218b75">&#9670;&#160;</a></span>ARRAY_SIZE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define A5256_CH0_NEGATIVE&#160;&#160;&#160;1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>CH0 negative polarity. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00698">698</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="ga936789237cd3cbbdf666776351ce9864" name="ga936789237cd3cbbdf666776351ce9864"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga936789237cd3cbbdf666776351ce9864">&#9670;&#160;</a></span>A5256_CH0_DUAL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define A5256_CH0_DUAL&#160;&#160;&#160;2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>CH0 dual polarity. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00699">699</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="ga9526b983fa6940d208553aae6e8bb11c" name="ga9526b983fa6940d208553aae6e8bb11c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9526b983fa6940d208553aae6e8bb11c">&#9670;&#160;</a></span>ADAPTER_NONE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ADAPTER_NONE&#160;&#160;&#160;0x0000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>No adapter. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00702">702</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="gabee7c646315aaf8a6a11b646de67ebec" name="gabee7c646315aaf8a6a11b646de67ebec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabee7c646315aaf8a6a11b646de67ebec">&#9670;&#160;</a></span>ADAPTER_A5255</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ADAPTER_A5255&#160;&#160;&#160;0x0000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A5255 is just a mechanical adapter (same as NONE) </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00703">703</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="ga752b57c2d19a35d312b1de8de44b2157" name="ga752b57c2d19a35d312b1de8de44b2157"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga752b57c2d19a35d312b1de8de44b2157">&#9670;&#160;</a></span>ADAPTER_A5256</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ADAPTER_A5256&#160;&#160;&#160;0x0002</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>16+1 ch discriminator with programmable thresholds </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00704">704</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="gab71dea992788ec42dd8b94f8ea6140bc" name="gab71dea992788ec42dd8b94f8ea6140bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab71dea992788ec42dd8b94f8ea6140bc">&#9670;&#160;</a></span>ADAPTER_A5256_REV0_POS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ADAPTER_A5256_REV0_POS&#160;&#160;&#160;0x0100</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Proto0 of A5256 used with positive signals (discontinued) </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00705">705</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="ga5f408440224159cc88dfd39eb271a932" name="ga5f408440224159cc88dfd39eb271a932"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5f408440224159cc88dfd39eb271a932">&#9670;&#160;</a></span>ADAPTER_A5256_REV0_NEG</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ADAPTER_A5256_REV0_NEG&#160;&#160;&#160;0x0101</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Proto0 of A5256 used with negative signals (discontinued) </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00706">706</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="ga1fa2460e32327ade49189c95740bc1b5" name="ga1fa2460e32327ade49189c95740bc1b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1fa2460e32327ade49189c95740bc1b5">&#9670;&#160;</a></span>NC</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define NC&#160;&#160;&#160;-1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00709">709</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="ga6c2876a9609215113a75cb76e6786149" name="ga6c2876a9609215113a75cb76e6786149"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6c2876a9609215113a75cb76e6786149">&#9670;&#160;</a></span>A5256_DAC_LSB</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define A5256_DAC_LSB&#160;&#160;&#160;((float)2500/4095)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>LSB of the threshold in mV. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00711">711</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
-
-</div>
-</div>
-<a id="ga39bcae8bae49acd7cc4014f20abaf988" name="ga39bcae8bae49acd7cc4014f20abaf988"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga39bcae8bae49acd7cc4014f20abaf988">&#9670;&#160;</a></span>A5256_mV_to_DAC</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define A5256_mV_to_DAC</td>
+          <td class="memname">#define ARRAY_SIZE</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mV</em></span></td><td>)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(uint32_t)round((1250 - (mV)) / <a class="code hl_define" href="#ga6c2876a9609215113a75cb76e6786149">A5256_DAC_LSB</a>)</div>
-<div class="ttc" id="aa00065_html_ga6c2876a9609215113a75cb76e6786149"><div class="ttname"><a href="#ga6c2876a9609215113a75cb76e6786149">A5256_DAC_LSB</a></div><div class="ttdeci">#define A5256_DAC_LSB</div><div class="ttdoc">LSB of the threshold in mV.</div><div class="ttdef"><b>Definition</b> <a href="a00026_source.html#l00711">FERSlib.h:711</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">(<span class="keyword">sizeof</span>(x)/<span class="keyword">sizeof</span>((x)[0]))</div>
 </div><!-- fragment -->
-<p>Convert Threshold from mV into DAC LSB. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00712">712</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00065_source.html#l00031">31</a> of file <a class="el" href="a00065_source.html">FERS_config.h</a>.</p>
 
 </div>
 </div>
-<a id="ga5ee8ba218977a8dfb28c549e3d32f841" name="ga5ee8ba218977a8dfb28c549e3d32f841"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5ee8ba218977a8dfb28c549e3d32f841">&#9670;&#160;</a></span>A5256_DAC_to_mV</h2>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a233846bd921de6b8f21f23de21039f92" name="a233846bd921de6b8f21f23de21039f92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a233846bd921de6b8f21f23de21039f92">&#9670;&#160;</a></span>FERScfg</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">#define A5256_DAC_to_mV</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>lsb</em></span></td><td>)</td>
-          <td></td>
+          <td class="memname"><a class="el" href="a00162.html">Config_t</a>* FERScfg[128]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(1250 - (float)((lsb) * <a class="code hl_define" href="#ga6c2876a9609215113a75cb76e6786149">A5256_DAC_LSB</a>))</div>
-</div><!-- fragment -->
-<p>Convert Threshold from DAC LSB to mV. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00713">713</a> of file <a class="el" href="a00026_source.html">FERSlib.h</a>.</p>
 
 </div>
 </div>
@@ -382,7 +202,8 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 27 2025 15:21:58 for CAEN FERS Library by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00065.html">FERS_config.h</a></li>
+    <li class="footer">Generated on Tue Dec 23 2025 15:19:32 for CAEN FERS Library by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

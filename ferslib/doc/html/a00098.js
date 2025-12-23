@@ -1,9 +1,13 @@
 var a00098 =
 [
-    [ "pid", "a00098.html#aec32162d9dc3fde2c76d766af522dae5", null ],
-    [ "AdapterCode", "a00098.html#a52375f9de2a3c2c733f7e6e9205dff3f", null ],
-    [ "PCBrevision", "a00098.html#a714db71aa694dfcf75211f064f6631e3", null ],
-    [ "ModelCode", "a00098.html#a7bab95d610c3514c388bfd04aba1996a", null ],
-    [ "ModelName", "a00098.html#a3796db4df8c5770a59ce01e03761b145", null ],
-    [ "NumCh", "a00098.html#a2c9f27aff8149916cc0bcf507b917fbe", null ]
+    [ "FERS_INDEX", "a00098.html#gada24a03855f045f1b01277d85fc1c2c9", null ],
+    [ "FERS_CONNECTIONTYPE", "a00098.html#gad154e7a7b1b1835eccf7c01be2e3f22c", null ],
+    [ "FERS_CONNECTIONTYPE_ETH", "a00098.html#gafe839bf7b22bc6ebf551a85d6fd5a6c4", null ],
+    [ "FERS_CONNECTIONTYPE_USB", "a00098.html#ga170c56ab0985e6d314e178b5838b3324", null ],
+    [ "FERS_CONNECTIONTYPE_TDL", "a00098.html#gaa6286033eebcd70a907212bf0500a973", null ],
+    [ "FERS_CONNECTIONTYPE_CNC", "a00098.html#ga3bccd24a3657fca3680ccc865fbc8188", null ],
+    [ "FERS_NODE", "a00098.html#ga8d8172791483ea582016390407ea0bfd", null ],
+    [ "FERS_CHAIN", "a00098.html#ga2f231dd77081b11594fb9565dad3347c", null ],
+    [ "FERS_CNCINDEX", "a00098.html#ga42746935cf618a8db41bce7343371bb0", null ],
+    [ "FERS_CNC_HANDLE", "a00098.html#ga2d72378af61f40dae35ae9745738bf34", null ]
 ];

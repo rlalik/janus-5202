@@ -1,5 +1,4 @@
-<map id="FERS_CncInfo_t" name="FERS_CncInfo_t">
-<area shape="rect" id="Node000001" title="Concentrator board information structure." alt="" coords="18,277,145,505"/>
-<area shape="rect" id="Node000002" href="$a00086.html" title="TDL chain information structure." alt="" coords="5,5,157,212"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,212,84,260,78,260,78,212"/>
+<map id="Library version" name="Library version">
+<area shape="rect" id="Node000001" title="Macros to define the library version." alt="" coords="118,5,226,33"/>
+<area shape="rect" id="Node000002" href="$a00086.html" title="Common macros." alt="" coords="5,5,70,33"/>
 </map>

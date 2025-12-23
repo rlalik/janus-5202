@@ -47,7 +47,7 @@ function show_help() {
 }
 
 if [ -n "$BASH" ]; then
-	echo "###############################################"
+	echo -e "${Green}###############################################${Clear}"
 else
 	echo -e "${Red} Please, run the installer with bash:"
 	echo -e " - bash Janus_Installer.bash${Clear}"
@@ -56,11 +56,40 @@ else
 fi
 	
 
+function CheckRequirements() {
+	dist=$1
+	chmod +x check_requirements.bash
+	./check_requirements.bash $dist
+	ret=$?
+
+	if [ $ret -eq 3 ]; then
+		echo -e "${Yellow}Gnuplot in Janus may not work properly without wxt terminal installed${Clear}"
+	elif [ $ret -ne 0 ];  then
+		echo -e "${Red}Required package missing. Cannot procede with Janus installation${Clear}"
+		echo -e "Exiting ..."
+		return 10
+	fi
+}
+
+function Installation {
+	chmod +x installFERSlibJanus.bash
+	./installFERSlibJanus.bash
+	res=$?
+	return $res
+}
+
+function CfgUSB {
+	chmod +x setUSBrules.bash
+	./setUSBrules.bash
+	res=$?
+	return $res
+}
+
 #################
 # --- MAIN ---- #
 #################	
 	
-echo -e "${Green}"
+echo -e -n "${Green}"
 echo "###############################################"
 echo "###                                         ###"
 echo "###       WELCOME TO JANUS INSTALLER        ###"
@@ -73,81 +102,6 @@ echo "###                                         ###"
 echo "###############################################"
 echo "###############################################"
 echo -e "${Clear}"
-
-iCheck=0
-iInstall=0
-iSetRule=0
-
-echo ""
-echo "Select action to perform:"
-echo "1. Perform the complete installation"
-echo "2. Perform check on installation requirements"
-echo "3. Perform the FERSlib and Janus installation"
-echo "4. Perform the USB permission rule setting"
-echo ""
-read -rp "Enter your choice (1-4): " choice
-echo ""
-
-case "$choice" in
-
-    1)
-		iCheck=1
-        iInstall=1
-		iSetRule=1
-        echo "[SELECTED] Complete installation"
-		break
-        ;;
-
-    2)
-        iCheck=1
-        echo "[SELECTED] Requirements check"
-		break
-        ;;
-
-    3)
-        iInstall=1
-        echo "[SELECTED] FERSlib + JANUS installation"
-		break
-        ;;
-
-    4)
-        iSetRule=1
-        echo "[SELECTED] USB rule setting"
-		break
-        ;;
-
-    *)
-        ;;
-esac
-
-# This check must be moved on Check_Requirements script
-# gccV=`g++ -dumpversion`
-# res=$?
-# if [ $res -ne 0 ]; then
-	# echo -e "${Red}ERROR: g++ is missing"
-	# echo "Please, install g++ to proceed with Janus installer"
-	# echo -e "Exiting ...${Clear}"
-	# exit 1
-# fi
-
-#from [https://unix.stackexchange.com/questions/46081/identifying-the-system-package-manager]
-#declare -A osInfo;
-#osInfo[/etc/almalinux-release]=AlmaLinux   	#yum
-#osInfo[/etc/redhat-release]=fedoraRedhat   	#yum
-#osInfo[/etc/arch-release]=arch				#pacman
-#osInfo[/etc/gentoo-release]=gentoo			#emerge
-#osInfo[/etc/SuSE-release]=SuSE				#zypp
-#osInfo[/etc/SUSE-brand]=SuSE				#zypp
-#osInfo[/etc/debian_version]=debian			#apt-get
-#osInfo[/etc/alpine-release]=apline			#apk
-#vers=""
-#for f in ${!osInfo[@]}
-#do
-#    if [[ -f $f ]];then
-#		vers=${osInfo[$f]}
-#        # echo Package manager: ${osInfo[$f]}
-#    fi
-#done
 
 
 if [ -e /etc/os-release ]; then
@@ -163,8 +117,8 @@ fi
 
 ## Normalize name
 case "$name" in
-	almalinux|AlmaLinux) name="AlmaLinux" ;;
-	centos|CentOS) name="CentOS" ;;
+    almalinux|AlmaLinux) name="AlmaLinux" ;;
+    centos|CentOS) name="CentOS" ;;
     rockylinux|RockyLinux|rocky) name="Rocky Linux" ;;
     rhel|RedHat*|redhat) name="RedHat" ;;
     fedora|Fedora) name="Fedora" ;;
@@ -177,6 +131,116 @@ case "$name" in
     void|Void) name="Void Linux" ;;
     *) name="Other ($name)" ;;
 esac
+
+
+#########################################################################
+# Check Ubuntu distribution supported and achitecture
+arch=$(arch)
+
+# Accept only 64 bit architectures
+case "$arch" in
+    x86_64|amd64|aarch64|arm64)
+        echo "${name} ${version} (${arch})"
+        ;;
+    *)
+        echo -e "${Red}Unsupported architecture: ${arch}"
+        echo -e "(Only 64-bit systems are supported) ${Clear}"
+        exit 1
+        ;;
+esac
+
+
+iCheck=0
+iInstall=0
+iSetRule=0
+
+while true; do
+	echo ""
+	echo "Select the action to perform:"
+	echo "0. Full installation (suggested for Ubuntu and Fedora distribution or when the requirements are satisfied"
+	echo "Or select one of the following installation step:"
+	echo "2. Check installation requirements"
+	echo "3. Install FERSlib and Janus"
+	echo "4. Configure USB permission rules"
+	echo "q. Quit this installer"
+	echo ""
+	read -rp "Enter your choice (1-4): " choice
+	echo ""
+	
+	case "$choice" in
+	
+		0)
+			echo "Full installation selected"		
+			CheckRequirements $dist
+			ret0=$?
+			if [ $ret0 -ne 0 ]; then
+				echo "Check requirements function exits with error $ret0. Exiting ..."
+			fi
+			Installation
+			ret0=$?
+			if [ $ret0 -ne 0 ]; then
+				echo "FERSlib and Janus installation exits with error $ret0. Exiting ..."
+			fi
+			CfgUSB
+			ret0=$?
+			if [ $ret0 -ne 0 ]; then
+				echo "Configure USB permission rules exits with error $ret0. Exiting ..."
+			fi			
+			#iCheck=1
+			#iInstall=1
+			#iSetRule=1
+			;;
+	
+		1)	
+			echo "Requirements check selected"
+			CheckRequirements $dist 
+			ret0=$?
+			if [ $ret0 -ne 0 ]; then
+				echo "Check requirements function exits with error $ret0. Exiting ..."
+			fi
+			#iCheck=1
+			;;
+	
+		2)
+			echo "FERSlib + JANUS installation selected"
+			Installation
+			ret0=$?
+			if [ $ret0 -ne 0 ]; then
+				echo "FERSlib and Janus installation exits with error $ret0. Exiting ..."
+			fi
+			#iInstall=1
+			;;
+	
+		3)
+			echo "Configure USB permission rules selected"
+			CfgUSB
+			ret0=$?
+			if [ $ret0 -ne 0 ]; then
+				echo "Configure USB permission rules exits with error $ret0. Exiting ..."
+			fi	
+			#iSetRule=1
+			;;
+		q|Q)
+			echo "Exiting ..."
+			break
+			;;
+		*)
+			;;
+	esac
+done
+
+# This check must be moved on Check_Requirements script
+# gccV=`g++ -dumpversion`
+# res=$?
+# if [ $res -ne 0 ]; then
+	# echo -e "${Red}ERROR: g++ is missing"
+	# echo "Please, install g++ to proceed with Janus installer"
+	# echo -e "Exiting ...${Clear}"
+	# exit 1
+# fi
+
+
+
 
 
 #if [ $gccV -gt 13 ]; then
@@ -197,81 +261,67 @@ esac
 #	vers="in-use"
 #fi
 
-#########################################################################
-# Check Ubuntu distribution supported and achitecture
-arch=$(arch)
 
-# Accept only 64 bit architectures
-case "$arch" in
-    x86_64|amd64|aarch64|arm64)
-        echo "${name} ${version} (${arch})"
-        ;;
-    *)
-        echo -e "${Red}Unsupported architecture: ${arch}"
-        echo -e "(Only 64-bit systems are supported) ${Clear}"
-        exit 1
-        ;;
-esac
 	
 	
-if [ $name != "debian" ] && [ $name != "fedora" ] && [ $name != "Ubuntu" ] && [ $name != "RedHat" ]; then
-	echo -e "${Yellow}Linux distribution ${name} is not supported by Janus Installer"
-	echo
-	echo
-	show_help
-	# echo "Please install the following packages before compiling Janus:"
-	# echo " - libusb-1.0"
-	# echo " - pkg-config"
-	# echo " - gnuplot"
-	# echo " - python3"
-	# echo " - python3 tkinter"
-	# echo " - python3 pillow"
-	# echo " - python3 pillow tkinter"
-	# echo 
-	# echo "Compile Janus by running in shell the command:  make all"
-	echo 
-	echo -e "${Clear}"
-	
-	if [ $iCheck -eq 1 ]; then
-		chmod +x check_requirements.bash
-		./check_requirements.bash $dist
-	fi
-	
-	if [ $iSetRule -eq 1 ]; then
-		chmod +x setUSBrules.bash
-		./setUSBrules.bash
-	fi
-else
-	# Set installer name
-	# Cambiare nome allo script: installer_fedora.bash
-
-	if [ $iCheck -eq 1 ]; then
-		chmod +x check_requirements.bash
-		./check_requirements.bash $dist
-	fi
-	ret=$?
-
-	if [ $ret -eq 3 ]; then
-		echo -e "${Yellow}Gnuplot in Janus may not work properly without wxt terminal installed${Clear}"
-	elif [ $ret -ne 0 ];  then
-		echo -e "${Red}Required package missing. Cannot procede with Janus installation"
-		echo -e "Exiting ..."
-		exit 10
-	fi
-	
-	if [ $iInstall -eq 1 ]; then
-		chmod +x installFERSlibJanus.bash
-		./installFERSlibJanus.bash
-	fi
-	
-	if [ $iSetRule -eq 1 ]; then
-		chmod +x setUSBrules.bash
-		./setUSBrules.bash
-	fi
-	#installer=installer_${dist}.bash
-	#chmod +x $installer
-	#./$installer
-fi
+#if [ $name != "Debian" ] && [ $name != "Fedora" ] && [ $name != "Ubuntu" ] && [ $name != "RedHat" ]; then
+#	echo -e "${Yellow}Linux distribution ${name} is not supported by Janus Installer"
+#	echo
+#	echo
+#	show_help
+#	# echo "Please install the following packages before compiling Janus:"
+#	# echo " - libusb-1.0"
+#	# echo " - pkg-config"
+#	# echo " - gnuplot"
+#	# echo " - python3"
+#	# echo " - python3 tkinter"
+#	# echo " - python3 pillow"
+#	# echo " - python3 pillow tkinter"
+#	# echo 
+#	# echo "Compile Janus by running in shell the command:  make all"
+#	echo 
+#	echo -e "${Clear}"
+#	
+#	if [ $iCheck -eq 1 ]; then
+#		chmod +x check_requirements.bash
+#		./check_requirements.bash $dist
+#	fi
+#	
+#	if [ $iSetRule -eq 1 ]; then
+#		chmod +x setUSBrules.bash
+#		./setUSBrules.bash
+#	fi
+#else
+#	# Set installer name
+#	# Cambiare nome allo script: installer_fedora.bash
+#
+#	if [ $iCheck -eq 1 ]; then
+#		chmod +x check_requirements.bash
+#		./check_requirements.bash $dist
+#	fi
+#	ret=$?
+#
+#	if [ $ret -eq 3 ]; then
+#		echo -e "${Yellow}Gnuplot in Janus may not work properly without wxt terminal installed${Clear}"
+#	elif [ $ret -ne 0 ];  then
+#		echo -e "${Red}Required package missing. Cannot procede with Janus installation${Clear}"
+#		echo -e "Exiting ..."
+#		exit 10
+#	fi
+#	
+#	if [ $iInstall -eq 1 ]; then
+#		chmod +x installFERSlibJanus.bash
+#		./installFERSlibJanus.bash
+#	fi
+#	
+#	if [ $iSetRule -eq 1 ]; then
+#		chmod +x setUSBrules.bash
+#		./setUSBrules.bash
+#	fi
+#	#installer=installer_${dist}.bash
+#	#chmod +x $installer
+#	#./$installer
+#fi
 
 #installer.bash
 #./installer.bash

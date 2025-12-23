@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CAEN FERS Library: EEPROM</title>
+<title>CAEN FERS Library: FERS Library Structures</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="caen_logo.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">CAEN FERS Library<span id="projectnumber">&#160;release/v1.3.0 (55527ef5)</span>
+   <div id="projectname">CAEN FERS Library<span id="projectnumber">&#160;release/v1.3.0 (fa48f01b)</span>
    </div>
    <div id="projectbrief">SDK for FERS systems</div>
   </td>
@@ -100,221 +100,39 @@ $(function(){initNavTree('a00080.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">EEPROM<div class="ingroups"><a class="el" href="a00066.html">API</a> &raquo; <a class="el" href="a00079.html">A5256 adapter</a></div></div></div>
+<a href="#groups">Topics</a>  </div>
+  <div class="headertitle"><div class="title">FERS Library Structures</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Structures of FERS Library.  
+<a href="#details">More...</a></p>
 <div class="dynheader">
-Collaboration diagram for EEPROM:</div>
+Collaboration diagram for FERS Library Structures:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00080.svg" width="242" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00080.svg" width="396" height="143"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:gaf694b43621c7375bb30b11365ffb55d7" id="r_gaf694b43621c7375bb30b11365ffb55d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf694b43621c7375bb30b11365ffb55d7">FERS_ReadA5256EEPROMInfo</a> (int handle, <a class="el" href="a00098.html">FERS_A5256_Info_t</a> *binfo)</td></tr>
-<tr class="memdesc:gaf694b43621c7375bb30b11365ffb55d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read Adapter A5256 info into the relevant EEPROM memory page.  <br /></td></tr>
-<tr class="separator:gaf694b43621c7375bb30b11365ffb55d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga80f619c24a9767ad167ee83570a35528" id="r_ga80f619c24a9767ad167ee83570a35528"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga80f619c24a9767ad167ee83570a35528">FERS_WriteA5256EEPROMInfo</a> (int handle, <a class="el" href="a00098.html">FERS_A5256_Info_t</a> binfo)</td></tr>
-<tr class="memdesc:ga80f619c24a9767ad167ee83570a35528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write Adapter A5256 info into the relevant EEPROM memory page.  <br /></td></tr>
-<tr class="separator:ga80f619c24a9767ad167ee83570a35528"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa324ec9790f55fcab82201180afb3c32" id="r_gaa324ec9790f55fcab82201180afb3c32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa324ec9790f55fcab82201180afb3c32">FERS_ReadEEPROMBlock</a> (int handle, int start_address, int size, uint8_t *data)</td></tr>
-<tr class="memdesc:gaa324ec9790f55fcab82201180afb3c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a block of data from the EEPROM.  <br /></td></tr>
-<tr class="separator:gaa324ec9790f55fcab82201180afb3c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7c535ea1ab836ea5d4e3c8458bc0c6a1" id="r_ga7c535ea1ab836ea5d4e3c8458bc0c6a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7c535ea1ab836ea5d4e3c8458bc0c6a1">FERS_WriteEEPROMBlock</a> (int handle, int start_address, int size, uint8_t *data)</td></tr>
-<tr class="memdesc:ga7c535ea1ab836ea5d4e3c8458bc0c6a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a block of data to the EEPROM.  <br /></td></tr>
-<tr class="separator:ga7c535ea1ab836ea5d4e3c8458bc0c6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3ca915859bd477ccd74a6a2d3162b672" id="r_ga3ca915859bd477ccd74a6a2d3162b672"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3ca915859bd477ccd74a6a2d3162b672">FERS_checkA5256presence</a> (int handle, <a class="el" href="a00098.html">FERS_A5256_Info_t</a> *tinfo)</td></tr>
-<tr class="memdesc:ga3ca915859bd477ccd74a6a2d3162b672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check A5256 presence.  <br /></td></tr>
-<tr class="separator:ga3ca915859bd477ccd74a6a2d3162b672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="groups" name="groups"></a>
+Topics</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00081.html">Data</a></td></tr>
+<tr class="memdesc:a00081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data structures for the FERS library. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00082.html">Board Info</a></td></tr>
+<tr class="memdesc:a00082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Board Info structures for the FERS library. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00083.html">Configuration parameters</a></td></tr>
+<tr class="memdesc:a00083"><td class="mdescLeft">&#160;</td><td class="mdescRight">FERS configuration parameters structure (lib + board) <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="gaf694b43621c7375bb30b11365ffb55d7" name="gaf694b43621c7375bb30b11365ffb55d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf694b43621c7375bb30b11365ffb55d7">&#9670;&#160;</a></span>FERS_ReadA5256EEPROMInfo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int FERS_ReadA5256EEPROMInfo </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00098.html">FERS_A5256_Info_t</a> *</td>          <td class="paramname"><span class="paramname"><em>binfo</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read Adapter A5256 info into the relevant EEPROM memory page. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">binfo</td><td>Pointer to the adapter information </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Board handle </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, or a negative error code as defined in <a class="el" href="a00051.html#ga3b7f684434356c7a07c9663233e2377c" title="Error codes.">FERSLIB_ErrorCodes</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga80f619c24a9767ad167ee83570a35528" name="ga80f619c24a9767ad167ee83570a35528"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga80f619c24a9767ad167ee83570a35528">&#9670;&#160;</a></span>FERS_WriteA5256EEPROMInfo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int FERS_WriteA5256EEPROMInfo </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00098.html">FERS_A5256_Info_t</a></td>          <td class="paramname"><span class="paramname"><em>binfo</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write Adapter A5256 info into the relevant EEPROM memory page. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Board handle </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">binfo</td><td>Adapter information to write </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, or a negative error code as defined in <a class="el" href="a00051.html#ga3b7f684434356c7a07c9663233e2377c" title="Error codes.">FERSLIB_ErrorCodes</a> </dd></dl>
-
-</div>
-</div>
-<a id="gaa324ec9790f55fcab82201180afb3c32" name="gaa324ec9790f55fcab82201180afb3c32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa324ec9790f55fcab82201180afb3c32">&#9670;&#160;</a></span>FERS_ReadEEPROMBlock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int FERS_ReadEEPROMBlock </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>start_address</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reads a block of data from the EEPROM. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>Pointer to store the data read from EEPROM </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Board handle </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">start_address</td><td>Starting address in EEPROM to read from </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Number of bytes to read </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, or a negative error code as defined in <a class="el" href="a00051.html#ga3b7f684434356c7a07c9663233e2377c" title="Error codes.">FERSLIB_ErrorCodes</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga7c535ea1ab836ea5d4e3c8458bc0c6a1" name="ga7c535ea1ab836ea5d4e3c8458bc0c6a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7c535ea1ab836ea5d4e3c8458bc0c6a1">&#9670;&#160;</a></span>FERS_WriteEEPROMBlock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int FERS_WriteEEPROMBlock </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>start_address</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Writes a block of data to the EEPROM. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Board handle </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">start_address</td><td>Starting address in EEPROM to write to </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Number of bytes to write </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Pointer to the data to write </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, or a negative error code as defined in <a class="el" href="a00051.html#ga3b7f684434356c7a07c9663233e2377c" title="Error codes.">FERSLIB_ErrorCodes</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga3ca915859bd477ccd74a6a2d3162b672" name="ga3ca915859bd477ccd74a6a2d3162b672"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3ca915859bd477ccd74a6a2d3162b672">&#9670;&#160;</a></span>FERS_checkA5256presence()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int FERS_checkA5256presence </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00098.html">FERS_A5256_Info_t</a> *</td>          <td class="paramname"><span class="paramname"><em>tinfo</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check A5256 presence. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Board handle, </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">tinfo</td><td>A5256 info structure (it will be removedfrom v2.0.0) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, or a negative error code as defined in <a class="el" href="a00051.html#ga3b7f684434356c7a07c9663233e2377c" title="Error codes.">FERSLIB_ErrorCodes</a> </dd></dl>
-
-</div>
-</div>
+<p>Structures of FERS Library. </p>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 27 2025 15:21:58 for CAEN FERS Library by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Dec 23 2025 15:19:32 for CAEN FERS Library by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

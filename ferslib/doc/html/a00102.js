@@ -1,14 +1,19 @@
 var a00102 =
 [
-    [ "tstamp_us", "a00102.html#a3910478268d5c9fa19ab68084cbe8195", null ],
-    [ "rel_tstamp_us", "a00102.html#a2b3208fa9688764fcab912d52f700b7f", null ],
-    [ "tstamp_clk", "a00102.html#af0fcb8217ed82b6bd7f7d5d23d7912a3", null ],
-    [ "Tref_tstamp", "a00102.html#a384da401a0e80ab9d1fc8674dac42675", null ],
-    [ "trigger_id", "a00102.html#ad55fb5f524440d8935780ee42b9ab099", null ],
-    [ "chmask", "a00102.html#ac68b66c6b15066ab7f3e4a26db7de8e1", null ],
-    [ "qdmask", "a00102.html#a82fb92352a02a70f14efa099c9427d90", null ],
-    [ "energyHG", "a00102.html#a92a18f85977e6f62bb7342282a557abf", null ],
-    [ "energyLG", "a00102.html#a40699a4c602273a034fe61130599046a", null ],
-    [ "tstamp", "a00102.html#ae32044fc39e9e22c6cebc861b5b8b50a", null ],
-    [ "ToT", "a00102.html#aa3c3cb15c1d76366bf8f1d6660f9253a", null ]
+    [ "Library info", "a00103.html", "a00103" ],
+    [ "Messaging and errors", "a00104.html", "a00104" ],
+    [ "RawData Saving/Loading", "a00105.html", "a00105" ],
+    [ "Open/Close", "a00106.html", "a00106" ],
+    [ "Read/Write registers", "a00107.html", "a00107" ],
+    [ "Pedestal", "a00108.html", "a00108" ],
+    [ "Board info", "a00109.html", "a00109" ],
+    [ "Read sensors temperature", "a00110.html", "a00110" ],
+    [ "High Voltage control", "a00111.html", "a00111" ],
+    [ "FERS configuration", "a00112.html", "a00112" ],
+    [ "Data readout", "a00113.html", "a00113" ],
+    [ "Firmware upgrade", "a00114.html", "a00114" ],
+    [ "A5256 adapter", "a00115.html", "a00115" ],
+    [ "FERS_DumpBoardRegister", "a00102.html#ga865188e68259131b1380ee498dfc1214", null ],
+    [ "FERS_DumpCfgSaved", "a00102.html#gae6ca7e8798eb46331b4a7304723acc44", null ],
+    [ "FERS_DisableThrCalib", "a00102.html#ga336b70580c4e9abd6f42d5b5f71502e4", null ]
 ];

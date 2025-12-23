@@ -1,7 +1,10 @@
 var a00122 =
 [
-    [ "tstamp_us", "a00122.html#a3910478268d5c9fa19ab68084cbe8195", null ],
-    [ "trigger_id", "a00122.html#ad55fb5f524440d8935780ee42b9ab099", null ],
-    [ "nwords", "a00122.html#aa231dd283544fe9246bd1b9373877ec0", null ],
-    [ "test_data", "a00122.html#a25e2198100421e35c991b89f3ad80a86", null ]
+    [ "Status", "a00122.html#ada867201db4267c42d610764b42b9525", null ],
+    [ "BoardCount", "a00122.html#ab778aa69635d57ccf541d8b7e22b664d", null ],
+    [ "rrt", "a00122.html#a3812118673e68c4b48f3ebd730ad18cf", null ],
+    [ "EventCount", "a00122.html#a37d7446ebf0e0e9491397d0a8acd198b", null ],
+    [ "ByteCount", "a00122.html#aa520946042817ef97b59854c7ad5fb67", null ],
+    [ "EventRate", "a00122.html#a11b1c2fef9f68c715320883ddb7c29e9", null ],
+    [ "Mbps", "a00122.html#aeb5f0180c5e0dff09862fe77e79d9ed9", null ]
 ];

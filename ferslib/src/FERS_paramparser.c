@@ -529,8 +529,8 @@ int _setDefaultConfig(int brd)
 	FERScfg[brd]->EnableChannelTrgout = 1;					// 0 = Channel Trgout Disabled, 1 = Enabled
 	FERScfg[brd]->FastShaperInput = 0;						// Fast Shaper (Tdiscr) connection: 0 = High Gain PA, 1 = Low Gain PA
 	FERScfg[brd]->CncBufferSize = 0;
-	FERScfg[brd]->CncProbe_A = (uint32_t)-1;
-	FERScfg[brd]->CncProbe_B = (uint32_t)-1;
+	FERScfg[brd]->CncProbe_A = (uint32_t)0;
+	FERScfg[brd]->CncProbe_B = (uint32_t)0;
 
 	FERScfg[brd]->HV_Vbias = 55;							// Voltage setting for HV
 	FERScfg[brd]->HV_Imax = 1.0;							// Imax for HV

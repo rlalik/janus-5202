@@ -26,26 +26,26 @@ var NAVTREE =
 [
   [ "CAEN FERS Library", "index.html", [
     [ "Introduction", "index.html", "index" ],
-    [ "Changelog", "a00367.html", null ],
-    [ "Installation", "a00368.html", [
-      [ "Windows", "a00368.html#autotoc_md0", null ],
-      [ "Linux", "a00368.html#autotoc_md1", null ]
+    [ "Changelog", "a00403.html", null ],
+    [ "Installation", "a00404.html", [
+      [ "Windows", "a00404.html#autotoc_md0", null ],
+      [ "Linux", "a00404.html#autotoc_md1", null ]
     ] ],
-    [ "Software development", "a00369.html", [
-      [ "Compile your project", "a00369.html#autotoc_md7", [
-        [ "Header", "a00369.html#autotoc_md8", null ],
-        [ "Shared library", "a00369.html#autotoc_md9", [
-          [ "Windows", "a00369.html#autotoc_md10", null ],
-          [ "Linux", "a00369.html#autotoc_md11", null ]
+    [ "Software development", "a00405.html", [
+      [ "Compile your project", "a00405.html#autotoc_md7", [
+        [ "Header", "a00405.html#autotoc_md8", null ],
+        [ "Shared library", "a00405.html#autotoc_md9", [
+          [ "Windows", "a00405.html#autotoc_md10", null ],
+          [ "Linux", "a00405.html#autotoc_md11", null ]
         ] ]
       ] ],
-      [ "Develop your software", "a00369.html#autotoc_md12", [
-        [ "Connect to device", "a00369.html#connect", [
-          [ "Log", "a00369.html#FERSlibLog", null ],
-          [ "Configure", "a00369.html#autotoc_md13", null ],
-          [ "Data acquisition", "a00369.html#autotoc_md14", null ]
+      [ "Develop your software", "a00405.html#autotoc_md12", [
+        [ "Connect to device", "a00405.html#connect", [
+          [ "Log", "a00405.html#FERSlibLog", null ],
+          [ "Configure", "a00405.html#autotoc_md13", null ],
+          [ "Data acquisition", "a00405.html#autotoc_md14", null ]
         ] ],
-        [ "Check last error", "a00369.html#autotoc_md15", null ]
+        [ "Check last error", "a00405.html#autotoc_md15", null ]
       ] ]
     ] ],
     [ "Topics", "topics.html", "topics" ],
@@ -73,11 +73,11 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"a00020.html",
-"a00035.html#aa2c22d21c4e5bd16d41c5314fdd0ca6b",
-"a00053.html#ga3d1a6e6c4743fb896c7d82497c71d0f6",
-"a00098.html#a7bab95d610c3514c388bfd04aba1996a",
-"a00150.html#a06a025f2a0b72384efb7b82bd2253c7d",
+"a00056.html",
+"a00071.html#aa2c22d21c4e5bd16d41c5314fdd0ca6b",
+"a00089.html#ga3d1a6e6c4743fb896c7d82497c71d0f6",
+"a00134.html#a7bab95d610c3514c388bfd04aba1996a",
+"a00186.html#a06a025f2a0b72384efb7b82bd2253c7d",
 "functions_v.html"
 ];
 

@@ -55,14 +55,26 @@ B. INSTALLATION
 
 ### Linux:
 *********************************************************************************************
-**Note**: Janus self-installation is supported only on Debian-based and Fedora distributions.
-However, you can still run `Janus_Install.bash` as root. It provides a short guide on how to 
-install Janus step by step on unsupported distributions and sets the USB rules for USB connections.
+**Note**: Janus self-installation is fully supported only on Ubuntu and Fedora distributions.
+For other distributions, the check_requirements function only verifies missing packages and 
+does not guarantee the automatic installation of all required dependencies. 
+If all the requirements are satisfied, you can run the full installation (option 1) or perform 
+each installation step individually.
 *********************************************************************************************
 
  1. **Installation**:
-	bash Janus_Install.bash
-    - Check if any required packages are missing and install them manually if the Linux distribution is not supported by the Janus Installer.     
+	./Janus_Install.bash
+    - The installation wizard provides four options:
+	  0. Full installation 				 
+	     (Suggested for Debian-based and Fedora, or when all the requirements are already satisfied. 
+		 This option may require sudo privileges)
+	  1. Check installation requirements 
+	     (Checking packages installation is strongly recommended. Automatically installation of missing packages
+		 required sudo and is guaranteed only in Debian-based and Fedora distributions)
+	  2. Install FERSlib and Janus 		 
+	     (Available on all Linux platform)
+	  3. Configure USB permission rules  
+	     (Available on all Linux platform. This option may require sudo privileges)
 
  2. **Run**:
     - **For GUI mode**:

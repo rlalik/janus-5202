@@ -200,7 +200,7 @@
 #define CMD_TDL_SYNC	   0x1C  //!< Sync signal from TDL
 #define CMD_USE_ICLK	   0x1E  //!< Use internal CLK for FPGA
 #define CMD_USE_ECLK	   0x1F  //!< Use external CLK for FPGA
-#define CMD_CFG_ASIC	   0x20  //!< Configure ASIC (load shift register). If used, refer to FERS_configure_5202.c, at @snippet FERS_configure_5202.c DioCANE
+#define CMD_CFG_ASIC	   0x20  //!< Configure ASIC (load shift register). If used, refer to FERS_configure_5202.c, at @snippet FERS_configure_5202.c SetCitiroc
 /*! @} */
 
 // ############################################################################################

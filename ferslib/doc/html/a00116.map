@@ -1,3 +1,4 @@
-<map id="ServEvent_t" name="ServEvent_t">
-<area shape="rect" id="Node000001" title="Service Event data structure, common to all FERS module." alt="" coords="5,5,113,301"/>
+<map id="EEPROM" name="EEPROM">
+<area shape="rect" id="Node000002" href="$a00115.html" title=" " alt="" coords="5,5,114,33"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="162,5,236,33"/>
 </map>

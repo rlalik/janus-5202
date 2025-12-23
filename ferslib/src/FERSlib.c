@@ -44,8 +44,8 @@ FERS_BoardInfo_t* FERS_BoardInfo[FERSLIB_MAX_NBRD] = { NULL };	// pointers to th
 FERS_CncInfo_t* FERS_CncInfo[FERSLIB_MAX_NCNC] = { NULL };	// pointers to the cnc info structs
 uint16_t MaxEnergyRange = (1 << 13) - 1;
 int CncConnected[FERSLIB_MAX_NCNC] = { 0 };				// Concentrator connection status
-char BoardPath[FERSLIB_MAX_NBRD][20];					// Path of the FE boards
-char CncPath[FERSLIB_MAX_NCNC][20];						// Path of the concentrator
+char BoardPath[FERSLIB_MAX_NBRD][64];					// Path of the FE boards
+char CncPath[FERSLIB_MAX_NCNC][64];						// Path of the concentrator
 char PedestalsFilename[500];
 int CncOpenHandles[FERSLIB_MAX_NCNC] = { 0 };			// Number of handles currently open for the concentrator (slave boards or concentrator itself)
 int HVinit[FERSLIB_MAX_NBRD] = { 0 };					// HV init flags
@@ -862,7 +862,7 @@ int FERS_GetCncInfo(int handle, FERS_CncInfo_t* BrdInfo)
 int FERS_IsOpen(char *path) 
 {
 	int i;
-	for(i=0; i<FERSLIB_MAX_NBRD; i++) 
+	for(i=0; i<NumBoardConnected; i++) 
 		if (BoardConnected[i] && (strcmp(BoardPath[i], path) == 0)) return 1;
 	for(i=0; i<FERSLIB_MAX_NCNC; i++) 
 		if (CncConnected[i] && (strcmp(CncPath[i], path) == 0)) return 1;

@@ -845,7 +845,7 @@ int main(int argc, char* argv[])
 
     for (int b = 0; b < this_cfg.num_brd; b++) {
         char* cc, cpath[100];
-        if (((cc = strstr(this_cfg.brd_path[b], "tdl")) != NULL)) {  // TDlink used => Open connection to concentrator (this is not mandatory, it is done for reading information about the concentrator)
+        if (((cc = strstr(this_cfg.brd_path[b], "tdl")) != NULL)) {  
             UsingCnc = 1;
             FERS_Get_CncPath(this_cfg.brd_path[b], cpath);
             if (!FERS_IsOpen(cpath)) {

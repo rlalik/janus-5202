@@ -303,10 +303,10 @@ int Configure5202(int handle, int mode) {
 		WriteCStoFileFormatted(path_file, SCbs[1]);
 	} else {
 
-		//! [DioCANE]
+		//! [SetCitiroc]
 		FERS_WriteRegister(handle, a_scbs_ctrl, 0x000);  // set citiroc index = 0
 		FERS_SendCommand(handle, CMD_CFG_ASIC);
-		//! [DioCANE] 
+		//! [SetCitiroc] 
 		ReadSCbsFromChip(handle, 0, SCbs[0]);
 		
 		//WriteCStoFile("CitirocCfg_bitstream_0.txt", SCbs[0]);

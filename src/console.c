@@ -434,6 +434,8 @@ int Con_GetInt(int *val)
 	if (!ConSocket) {
 		if (myscanf("%d", val) != 1)	// scanf
 			ret = -1;
+		int dump;
+		while (((dump=getchar()) != '\n') && dump!=EOF); // clear input buffer
 	}
 	else {
 		char data[SOCKET_BUFFER_SIZE];

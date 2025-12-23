@@ -35,13 +35,33 @@ class socket2daq:
 		self.s.listen(1)
 		self.s.settimeout(5.0)
 		self.conn, self.addr = self.s.accept()
+		# Ensure the RX thread can exit promptly (recv must not block forever).
+		try:
+			self.conn.settimeout(0.5)
+		except Exception:
+			pass
 
 
 	def dismiss(self):
-		self.s.close()
 		self.stopthread = True
 		self.rxrdy = 0
-		if self.t.is_alive(): self.t.join()
+		try:
+			self.conn.shutdown(socket.SHUT_RDWR)
+		except Exception:
+			pass
+		try:
+			self.conn.close()
+		except Exception:
+			pass
+		try:
+			self.s.close()
+		except Exception:
+			pass
+		try:
+			if self.t.is_alive():
+				self.t.join(timeout=1.0)
+		except Exception:
+			pass
 			
 
 	def RX_thread(self):
@@ -58,13 +78,24 @@ class socket2daq:
 			else:
 				self.mutex.release()
 			if len(rxbuff) <= 1 or len(rxbuff) < msize:
-				self.s.settimeout(5.0)
 				try:
 					datain = self.conn.recv(1024)
+				except socket.timeout:
+					continue
 				except socket.error as msg:
 					self.error = True
 					print(msg)
-					self.s.close()
+					try:
+						self.conn.close()
+					except Exception:
+						pass
+					try:
+						self.s.close()
+					except Exception:
+						pass
+					break
+				if not datain:
+					# Peer closed the connection.
 					break
 				rxbuff += datain
 			if  wait_for_size and len(rxbuff) > 1:

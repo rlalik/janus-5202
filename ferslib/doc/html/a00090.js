@@ -1,12 +1,13 @@
 var a00090 =
 [
-    [ "pid", "a00090.html#aec32162d9dc3fde2c76d766af522dae5", null ],
-    [ "PCBrevision", "a00090.html#adb0afb76f46b40ccfb8aa15d0d2d4fb0", null ],
-    [ "ModelCode", "a00090.html#a7bab95d610c3514c388bfd04aba1996a", null ],
-    [ "ModelName", "a00090.html#a3796db4df8c5770a59ce01e03761b145", null ],
-    [ "FPGA_FWrev", "a00090.html#a577ade2b9192533fd0c498a84e714616", null ],
-    [ "SW_rev", "a00090.html#aa2c554bb3bf916da23e583b5d7188a7c", null ],
-    [ "MACaddr_10GbE", "a00090.html#a2eac44154ef313db2889ca5f9f3fffa1", null ],
-    [ "NumLink", "a00090.html#ae585e5313ef5ab33cceeaf2cde9d420a", null ],
-    [ "ChainInfo", "a00090.html#a58bde59f034372445c611e291401e889", null ]
+    [ "DBLOG_FERSLIB_MSG", "a00090.html#ga7d0c321b3b8c95c3a0135b6b64edd1ea", null ],
+    [ "DBLOG_RAW_DATA_OUTFILE", "a00090.html#gaa3bbe4051cdea07901b4fa8ee61d0e48", null ],
+    [ "DBLOG_LL_DATADUMP", "a00090.html#gad45c7c7f88511dbddbdf33ec37b92e77", null ],
+    [ "DBLOG_LL_MSGDUMP", "a00090.html#ga925eaaf57bb9406a93894caecc8c78da", null ],
+    [ "DBLOG_QUEUES", "a00090.html#gadfebb739a7a8e434fed7533d7ed16111", null ],
+    [ "DBLOG_RAW_DECODE", "a00090.html#ga9a0904650604e91c925966b5c547ca4f", null ],
+    [ "DBLOG_LL_READDUMP", "a00090.html#ga2e9c246d1d4831b25499bde4ee1b6fa1", null ],
+    [ "DBLOG_PARAMS", "a00090.html#ga0ae5c0a4730f2e18b4b383cf5c468b94", null ],
+    [ "DBLOG_CONFIG", "a00090.html#gaf2d127c5c3845145468b3819d459450c", null ],
+    [ "ENABLE_FERSLIB_LOGMSG", "a00090.html#ga48b78a460bc070f9a06845cc0b2cccc0", null ]
 ];

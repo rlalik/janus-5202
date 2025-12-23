@@ -54,41 +54,41 @@ function createRule() {
 
 # Create rule for USB privilege - the installer must be run as root
 #if [ $isroot -ne 0 ]; then     # from https://www.xmodulo.com/change-usb-device-permission-linux.html
-	mVendor=04d8
-	mProduct=0053
-	echo "Checking USB rules"
-	FILERULE="/etc/udev/rules.d/50-myusb.rules"
-	USBRULE='SUBSYSTEMS=="usb",ATTRS{idVendor}=="'$mVendor'",ATTRS{idProduct}=="'$mProduct'",GROUP="users",MODE="0666"'
-	grep -Fxq $USBRULE $FILERULE
-	res=$? 
-	if [ $res -ne 0 ]; then
-		echo -e "${Yellow}The USB permission rule is not present on this PC${Clear}"
-		echo "Do you want to create the USB permission rule for FERS modules?"
-		echo "N.B: Sudo privileges are required"
-		while true; do
-			read -p "[y][n]:" choice
-	
-			case "$choice" in
-				y|Y)
-					if sudo -v; then
-						echo "Sudo authentication succesfull"
-						echo "Creating permission rule ..."
-						createRule
-					fi
-					exit 0
-					break
-					;;
-				n|N)
-					echo "USB permission rule creation skipped. You may not be able to connect with FERS module via USB"
-					break
-					;;
-			esac
-		done
-	else
-		echo -e "${Green}The usb permission rule is already present on this PC${Clear}"
-	fi
-	
-	echo -e "${Yellow}Please, be aware that, as user, you might not have the permission to connect"
-	echo -e "with FERS modules via USB. In case of USB connection issues, please re-run"
-	echo -e "this installer as root with USB plugged in to create the permission rule for connecting via USB.${Clear}"
+mVendor=04d8
+mProduct=0053
+echo "Checking USB rules"
+FILERULE="/etc/udev/rules.d/50-myusb.rules"
+USBRULE='SUBSYSTEMS=="usb",ATTRS{idVendor}=="'$mVendor'",ATTRS{idProduct}=="'$mProduct'",GROUP="users",MODE="0666"'
+grep -Fxq $USBRULE $FILERULE
+res=$? 
+if [ $res -ne 0 ]; then
+	echo -e "${Yellow}The USB permission rule is not present on this PC${Clear}"
+	echo "Do you want to create the USB permission rule for FERS modules?"
+	echo "N.B: Sudo privileges are required"
+	while true; do
+		read -p "[y][n]:" choice
+
+		case "$choice" in
+			y|Y)
+				if sudo -v; then
+					echo "Sudo authentication succesfull"
+					echo "Creating permission rule ..."
+					createRule
+				fi
+				exit 0
+				break
+				;;
+			n|N)
+				echo -e "${Yellow}USB permission rule creation skipped. You may not be able to connect with FERS module via USB${Clear}"
+				break
+				;;
+		esac
+	done
+else
+	echo -e "${Green}The usb permission rule is already present on this PC${Clear}"
+fi
+
+echo -e "${Yellow}Please, be aware that, as user, you might not have the permission to connect"
+echo -e "with FERS modules via USB. In case of USB connection issues, please re-run"
+echo -e "this installer as root with USB plugged in to create the permission rule for connecting via USB.${Clear}"
 

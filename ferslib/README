@@ -32,7 +32,7 @@ CAEN FERS Library Readme
     $ sudo make install
     $ sudo ldconfig
 
-  The ibrary and header files will be installed in /usr/local/lib and /usr/local/include,
+  The library and header files will be installed in /usr/local/lib and /usr/local/include,
   respectively. 
   
   If you want to use a different installation path, run:

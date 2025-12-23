@@ -81,5 +81,5 @@ if [ $res -ne 0 ]; then
 fi
 
 echo -e "${Green}Compilation succeded."
-echo -e "JanusC can be run from ./bin/JanusC${Clear}"
+echo -e "JanusC can be run from bin folder as ./JanusC${Clear}"
 

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['handles_20and_20indexing_0',['Handles and indexing',['../a00062.html',1,'']]],
-  ['high_20voltage_20control_1',['High Voltage control',['../a00075.html',1,'']]]
+  ['handles_20and_20indexing_0',['Handles and indexing',['../a00098.html',1,'']]],
+  ['high_20voltage_20control_1',['High Voltage control',['../a00111.html',1,'']]]
 ];
