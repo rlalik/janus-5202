@@ -1,4 +1,4 @@
-GuiMode		  b
+GuiMode       b
 ActiveBrd     0
 ActiveCh      0
 PlotType      0

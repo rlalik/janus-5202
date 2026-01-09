@@ -14,7 +14,7 @@ Open[0] eth:192.168.50.3
 # ------------------------------------------------------------------------------------------
 # HV_bias
 # ------------------------------------------------------------------------------------------
-HV_Vbias                           55 V                # Bias voltage (common to all channels, fine adjustable channel by channel by "HV_IndivAdj")
+HV_Vbias                           55 V                # Bias voltage, Range=[20 V, 85 V] (common to all channels, fine adjustable channel by channel by "HV_IndivAdj")
 HV_Imax                            1.0 mA              # Max current provided by the HV. The HV will be shut down if the current exceeds this limit.
 HV_Adjust_Range                    4.5                 # DAC range for the individual HV adjust.. Options: 4.5, 2.5, DISABLED
 HV_IndivAdj                        255                 # DAC setting for the Individual HV Adjust. Range from 0 to 255
@@ -36,12 +36,12 @@ JobLastRun                         5                   # Last Run of the Job
 RunSleep                           0 s                 # Wait Time between runs of a job
 EnableJobs                         0                   # Enable Jobs
 RunNumber_AutoIncr                 0                   # Run Number auto increment
-DataAnalysis					   ALL				   # Data Analysis Enable/disable mask. Options: ALL, CNT_ONLY, DISABLED
+DataAnalysis                       ALL                 # Data Analysis Enable/disable mask. Options: ALL, CNT_ONLY, DISABLED
 DataFilePath                       DataFiles           # Destination folder to save the output files
 OF_OutFileUnit                     LSB                 # ToA and ToT unit. Options: LSB, ns
-OF_EnMaxSize                       0                   # Limited Max File List Size
+OF_EnMaxSize                       0                   # Enable List file maximum size (Raw, binary, ASCII, CSV)
 OF_MaxSize                         1 GB                # Max size of List files (in Bytes), minimum size allowed 1 MB
-OF_RawData                         0	               # Event List file (Raw Data)
+OF_RawData                         0                   # Event List file (Raw data)
 OF_ListBin                         0                   # Event List file (binary)
 OF_ListAscii                       0                   # Event List file (ASCII)
 OF_ListCSV                         0                   # Event List file (CSV)
@@ -63,12 +63,12 @@ EnableListZeroSuppr                0                   # Enable suppression of e
 BunchTrgSource                     PTRG                # Bunch Trigger source (for spectroscopy and counting modes). Options: T0-IN, T1-IN, Q-OR, T-OR, TLOGIC, PTRG
 VetoSource                         DISABLED            # The veto signal inhibits the bunch trigger (active high). Options: DISABLED, SW_CMD, T0-IN, T1-IN
 ValidationSource                   T0-IN               # Source of the trigger validation signal. It must arrive within the window is opened by the bunch trigger and closed after Tv ~= 120 ns + HoldDelay.. Options: SW_CMD, T0-IN, T1-IN
-ValidationMode                     DISABLED            # ACCEPT: Trigger validated by the signal in the val. window. REJECT: trigger rejected if no signal arrives in the val. window. Options: DISABLED, ACCEPT, REJECT. Options: DISABLED, ACCEPT, REJECT
+ValidationMode                     DISABLED            # ACCEPT: Trigger validated by the signal in the val. window. REJECT: trigger rejected if a signal arrives in the val. window. Options: DISABLED, ACCEPT, REJECT. Options: DISABLED, ACCEPT, REJECT
 CountingMode                       SINGLES             # SINGLES: each channel counts its own self trigger. PAIRED_AND: couples of channels count in coincidence. Options: SINGLES, PAIRED_AND
-ChTrg_Width		                   0 ns                # Coincidence window for Paired_And counting mode. Min = 8 ns, Max = 2032 ns, Step = 8 ns
-EnableCntZeroSuppr                 1                   # Enable the suppression of channels with 0 counts in COUNTING mode.
+ChTrg_Width                        0 ns                # Coincidence window for Paired_And counting mode. Min = 8 ns, Max = 2032 ns, Step = 8 ns
+EnableCntZeroSuppr                 1                   # Enable the suppression of the channels with 0 counts in COUNTING mode.
 TrgIdMode                          TRIGGER_CNT         # Trigger ID mode: TRIGGER_CNT counts all triggers arrived to the board (accepted or not); VALIDATION_CNT counts validation signals (with or without associated trigger). Options: TRIGGER_CNT, VALIDATION_CNT
-TriggerLogic                       OR64                # Trigger Logic (Combinatorial network with 64 self trigger inputs). Options: OR64, AND2_OR32, OR32_AND2, MAJ64, MAJ32_AND2
+TriggerLogic                       OR64                # Trigger Logic (Combinatorial network with 64 self trigger inputs). Options: OR64, AND2_OR32, OR32_AND2, MAJ64, MAJ32_AND2, OR_QUAD
 Tlogic_Width                       0 ns                # TriggerLogic output width (0=linear)
 MajorityLevel                      3                   # Majority Level (1 to 64)
 PtrgPeriod                         1 ms                # Period of the internal periodic trigger
@@ -84,9 +84,9 @@ ChEnableMask1                      0xFFFFFFFF          # Channel enable mask (ch
 # Discr
 # ------------------------------------------------------------------------------------------
 FastShaperInput                    HG-PA               # The fast shaper can be connected to High gain or Low gain preamp. Options: HG-PA, LG-PA
-TD_CoarseThreshold                 220                 # Timing Discriminator coarse threshold (common to all channels)
-TD_FineThreshold                   0                   # Timing Discriminator fine threshold (individual). Max = 15 (4 bits)
-Trg_HoldOff                        0 ns                # Trigger hold-off time (imposed dead time)
+TD_CoarseThreshold                 220                 # Timing Discriminator coarse threshold (0 to 2047, common to all channels)
+TD_FineThreshold                   0                   # Timing Discriminator fine threshold (0 to 15, individual)
+Hit_HoldOff                        0                   # Trigger hold-off time (imposed dead time)
 Tlogic_Mask0                       0xFFFFFFFF          # Trigger Logic channel enable mask (ch 0..31)
 Tlogic_Mask1                       0xFFFFFFFF          # Trigger Logic channel enable mask (ch 32..63)
 QD_CoarseThreshold                 250                 # Charge Discriminator coarse threshold (common to all channels)
@@ -118,13 +118,13 @@ MCSHistoNbin                       4K                  # Number of channels (bin
 # ------------------------------------------------------------------------------------------
 AnalogProbe0                       OFF                 # Select the signal connected to the analog probe0. Options: OFF, FAST, SLOW_LG, SLOW_HG, PREAMP_LG, PREAMP_HG
 DigitalProbe0                      OFF                 # Select the signal connected to the digital probe0. Options: OFF, PEAK_LG, PEAK_HG, HOLD, START_CONV, DATA_COMMIT, DATA_VALID, CLK_1024, VAL_WINDOW, T_OR, Q_OR
-ProbeChannel0                      0                   # Select the channel connected to the analog and digital probes0
+ProbeChannel0                      0                   # Select the channel connected to the analog and digital probes0. Channels 0-31
 AnalogProbe1                       OFF                 # Select the signal connected to the analog probe1. Options: OFF, FAST, SLOW_LG, SLOW_HG, PREAMP_LG, PREAMP_HG
 DigitalProbe1                      OFF                 # Select the signal connected to the digital probe1. Options: OFF, PEAK_LG, PEAK_HG, HOLD, START_CONV, DATA_COMMIT, DATA_VALID, CLK_1024, VAL_WINDOW, T_OR, Q_OR
-ProbeChannel1                      0                   # Select the channel connected to the analog and digital probes1
+ProbeChannel1                      0                   # Select the channel connected to the analog and digital probes1. Channels 32-63
 TestPulseSource                    OFF                 # Select the source for the test pulse signal. Options: OFF, EXT, T0-IN, T1-IN, PTRG, SW-CMD
 TestPulseAmplitude                 200                 # DAC setting for the internal test pulser (12 bit)
-TestPulseDestination               ALL                 # Select which channels are connected to the test pulse input. Options: ALL, EVEN, ODD, CH 0, CH 1, CH 2, CH 3, CH 4, CH 5, CH 6, CH 7, CH 8, CH 9, CH 10, CH 11, CH 12, CH 13, CH 14, CH 15, CH 16, CH 17, CH 18, CH 19, CH 20, CH 21, CH 22, CH 23, CH 24, CH 25, CH 26, CH 27, CH 28, CH 29, CH 30, CH 31, CH 32, CH 33, CH 34, CH 35, CH 36, CH 37, CH 38, CH 39, CH 40, CH 41, CH 42, CH 43, CH 44, CH 45, CH 46, CH 47, CH 48, CH 49, CH 50, CH 51, CH 52, CH 53, CH 54, CH 55, CH 56, CH 57, CH 58, CH 59, CH 60, CH 61, CH 62, CH 63
+TestPulseDestination               ALL                 # Select which channels are connected to the test pulse input. Options: NONE, ALL, EVEN, ODD, CH 0, CH 1, CH 2, CH 3, CH 4, CH 5, CH 6, CH 7, CH 8, CH 9, CH 10, CH 11, CH 12, CH 13, CH 14, CH 15, CH 16, CH 17, CH 18, CH 19, CH 20, CH 21, CH 22, CH 23, CH 24, CH 25, CH 26, CH 27, CH 28, CH 29, CH 30, CH 31, CH 32, CH 33, CH 34, CH 35, CH 36, CH 37, CH 38, CH 39, CH 40, CH 41, CH 42, CH 43, CH 44, CH 45, CH 46, CH 47, CH 48, CH 49, CH 50, CH 51, CH 52, CH 53, CH 54, CH 55, CH 56, CH 57, CH 58, CH 59, CH 60, CH 61, CH 62, CH 63
 TestPulsePreamp                    BOTH                # Test pulse can feed both HG and LG preamps or only one of them. Options: LG, HG, BOTH
 
 

@@ -294,8 +294,8 @@ def WriteConfigFile(sections, params, filename, show_popup): # DNIN: need to pas
 						num_empty_field += 1
 						empty_field.append(params[p].name)
 						continue
-				ff.write(p.ljust(pf) + str(params[p].default).ljust(cf) + ' # ' + params[p].descr)
-				if debug == 1: print(p.ljust(pf), str(params[p].default).ljust(cf) + ' # ' + params[p].descr)
+				ff.write(p.ljust(pf) + str(params[p].default).ljust(cf) + '# ' + params[p].descr)
+				if debug == 1: print(p.ljust(pf), str(params[p].default).ljust(cf) + '# ' + params[p].descr)
 				if params[p].type == 'c':
 					ff.write('. Options: ')
 					for opt in params[p].options: 

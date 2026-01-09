@@ -331,30 +331,30 @@ class CtrlPanel():
 	def SaveRunVars(self):
 		if self.enable_runvarsave:
 			rf = open(sh.RunVars, "w")
-			rf.write("GuiMode		 " + self.guimode.get() + "\n")
-			rf.write("ActiveBrd      " + self.active_board.get() + "\n")  #str(0) + "\n")  # Where to get the Active brd from Ctrl?
-			rf.write("ActiveCh       " + str(self.active_channel.get()) + "\n")
-			rf.write("PlotType       " + str(self.plot_options.index(self.plot_type.get())) + "\n")
-			rf.write("SMonType       " + str(self.smon_options.index(self.smon_type.get())) + "\n")
-			rf.write("RunNumber      " + self.RunNumber.get() + "\n")
-			rf.write("Xcalib         " + str(self.Xcalib.get()) + "\n")
+			rf.write("GuiMode       " + self.guimode.get() + "\n")
+			rf.write("ActiveBrd     " + self.active_board.get() + "\n")  # Where to get the Active brd from Ctrl?
+			rf.write("ActiveCh      " + str(self.active_channel.get()) + "\n")
+			rf.write("PlotType      " + str(self.plot_options.index(self.plot_type.get())) + "\n")
+			rf.write("SMonType      " + str(self.smon_options.index(self.smon_type.get())) + "\n")
+			rf.write("RunNumber     " + self.RunNumber.get() + "\n")
+			rf.write("Xcalib        " + str(self.Xcalib.get()) + "\n")
 			default_PltTrSel = 1
 			for i in range(8):
-				if self.PlotTraceSel[i] != "": 
+				if self.PlotTraceSel[i] != "":
 					default_PltTrSel = 0
-					rf.write("PlotTraces     " + str(i) + " " + self.PlotTraceSel[i] + "\n") #+ "  ")	# Save Plot Trace on different lines
-					
+					rf.write("PlotTraces    " + str(i) + " " + self.PlotTraceSel[i] + "\n")  # Save Plot Trace on different lines
+
 			if default_PltTrSel == 1:
-				rf.write    ("PlotTraces     " + "0 0 0 B\n")
+				rf.write("PlotTraces    0 0 0 B\n")
 
 			if self.StaircaseSettings != "":
-				rf.write("Staircase      " + self.StaircaseSettings + "\n")
+				rf.write("Staircase     " + self.StaircaseSettings + "\n")
 			else:
-				rf.write("Staircase       0 150 300 1 500\n")   # Default
+				rf.write("Staircase     0 150 300 1 500\n")   # Default
 			if self.HoldScanSettings != "":
-				rf.write("HoldDelayScan  " + self.HoldScanSettings) # + "\n")
+				rf.write("HoldDelayScan " + self.HoldScanSettings + "\n")
 			else:
-				rf.write("HoldDelayScan   0 0 256 8 500\n")
+				rf.write("HoldDelayScan 0 0 256 8 500\n")
 			rf.close()
 
 

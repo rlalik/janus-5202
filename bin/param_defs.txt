@@ -6,17 +6,17 @@ Vers 1
 # Special Types: 'm' = monitor (showed in GUI but not saved to cfg file), '-' no parameter (graphic separators)
 
 # Name							Default_Value		Scope	Type	Description
-#---------------------------------------------------------------------------------------	
+#---------------------------------------------------------------------------------------
 [Connect]
 #---------------------------------------------------------------------------------------
-Open 							"eth:192.168.50.3"	b		s	
+Open 							"eth:192.168.50.3"	b		s
 
 #---------------------------------------------------------------------------------------
 [HV_bias]
 #---------------------------------------------------------------------------------------
 HV_Vbias						"62.5 V"			b		fu		# Bias voltage, Range=[20 V, 85 V] (common to all channels, fine adjustable channel by channel by "HV_IndivAdj")
 HV_Imax							"10.0 mA"			b		fu		# Max current provided by the HV. The HV will be shut down if the current exceeds this limit.
-HV_Adjust_Range					"4.5"				g		c		# DAC range for the individual HV adjust. 
+HV_Adjust_Range					"4.5"				g		c		# DAC range for the individual HV adjust.
 	- "4.5"
 	- "2.5"
 	- "DISABLED"
@@ -32,7 +32,7 @@ EnableTempFeedback				0					g	 	b		# Enable Vbias Temperature Feedback
 #---------------------------------------------------------------------------------------
 [RunCtrl]
 #---------------------------------------------------------------------------------------
-StartRunMode					ASYNC				g		c		# Start of Run mode 
+StartRunMode					ASYNC				g		c		# Start of Run mode
 	- ASYNC
 	- CHAIN_T0
 	- CHAIN_T1
@@ -64,7 +64,7 @@ DataAnalysis					ALL					g		c		# Data Analysis Enable/disable mask
 	- ALL
 	- CNT_ONLY
 	- DISABLED
-DataFilePath					DataFiles			g		s		# Destination folder to save the output files 
+DataFilePath					DataFiles			g		s		# Destination folder to save the output files
 OF_OutFileUnit					LSB					g		c		# ToA and ToT unit
 	- LSB
 	- ns
@@ -72,7 +72,7 @@ OF_EnMaxSize					0					g		b		# Enable List file maximum size (Raw, binary, ASCII
 OF_MaxSize						"1 GB"				g		fu		# Max size of List files (in Bytes), minimum size allowed 1 MB
 OF_RawData						0					g		b		# Event List file (Raw data)
 OF_ListBin						0					g		b		# Event List file (binary)
-OF_ListAscii 					0					g		b		# Event List file (ASCII) 
+OF_ListAscii 					0					g		b		# Event List file (ASCII)
 OF_ListCSV						0					g		b		# Event List file (CSV)
 OF_Sync 						0					g		b		# List with BrdID-Tstamp-TrgID (for sync check)
 OF_ServiceInfo 					0					g		b		# Service event info (temperature, Vmon, Imon, HVstatus)
@@ -92,12 +92,12 @@ AcquisitionMode					SPECTROSCOPY		g		c		# Acquisition mode
 	- TIMING_CSTART
 	- TIMING_CSTOP
 	- COUNTING
-	- WAVEFORM					
-	
+	- WAVEFORM
+
 EnableToT						1					g	 	b		# Enable ToT in timing mode (Enabled: ToA = 16 bits, ToT = 9 bits; Disabled: ToA = 25 bits)
 
 EnableListZeroSuppr				0					g		b		# Enable suppression of event with 0 hits in Timing mode for output list files
-	
+
 BunchTrgSource					T-OR				g		c		# Bunch Trigger source (for spectroscopy and counting modes)
 	- T0-IN
 	- T1-IN
@@ -125,7 +125,7 @@ ValidationMode					DISABLED			g		c		# ACCEPT: Trigger validated by the signal in
 CountingMode					SINGLES				g		c		# SINGLES: each channel counts its own self trigger. PAIRED_AND: couples of channels count in coincidence
 	- SINGLES
 	- PAIRED_AND
-	
+
 ChTrg_Width						"8 ns"				g		du		# Coincidence window for Paired_And counting mode. Min = 8 ns, Max = 2032 ns, Step = 8 ns
 
 EnableCntZeroSuppr				1					g		b		# Enable the suppression of the channels with 0 counts in COUNTING mode.
@@ -141,7 +141,7 @@ TriggerLogic					OR64				g		c		# Trigger Logic (Combinatorial network with 64 se
 	- MAJ64
 	- MAJ32_AND2
 	- OR_QUAD
-	
+
 Tlogic_Width					"0 ns"				g		du		# TriggerLogic output width (0=linear)
 
 MajorityLevel					2					g		d		# Majority Level (1 to 64)
@@ -173,7 +173,7 @@ T0_Out							T-OR				g		c		# T0_Out assignment
 	- TDL_SYNC
 	- RUN_SYNC
 	- ZERO
-	
+
 T1_Out							BUNCHTRG			g		c		# T1_Out assignment
 	- T1-IN
 	- BUNCHTRG
@@ -187,9 +187,9 @@ T1_Out							BUNCHTRG			g		c		# T1_Out assignment
 	- TDL_SYNC
 	- RUN_SYNC
 	- ZERO
-	
+
 _BLANK							-					-		-
-	
+
 ChEnableMask0					FFFFFFFF			b		h		# Channel enable mask (ch 0..31)
 ChEnableMask1					FFFFFFFF			b		h		# Channel enable mask (ch 32..63)
 
@@ -209,8 +209,8 @@ TD_CoarseThreshold				185					b		d		# Timing Discriminator coarse threshold (0 t
 TD_FineThreshold				0					c		d		# Timing Discriminator fine threshold (0 to 15, individual)
 Hit_HoldOff						0					g		u		# Trigger hold-off time (imposed dead time)
 
-Tlogic_Mask0					FFFFFFFF			b		h		# Trigger Logic channel enable mask (ch 0..31) 
-Tlogic_Mask1					FFFFFFFF			b		h		# Trigger Logic channel enable mask (ch 32..63) 
+Tlogic_Mask0					FFFFFFFF			b		h		# Trigger Logic channel enable mask (ch 0..31)
+Tlogic_Mask1					FFFFFFFF			b		h		# Trigger Logic channel enable mask (ch 32..63)
 
 _BLANK							-					-		-
 _BLANK							-					-		-
@@ -251,7 +251,7 @@ HG_ShapingTime					"25 ns"				g		c		# Shaping Time of the slow shaper (High Gain
 	- "37.5 ns"
 	- "25 ns"
 	- "12.5 ns"
-	
+
 LG_ShapingTime					"25 ns"				g		c		# Shaping Time of the slow shaper (Low Gain)
 	- "87.5 ns"
 	- "75 ns"
@@ -303,7 +303,7 @@ MCSHistoNbin					4K					g		c		# Number of channels (bins) in the MCS histogram (
 #---------------------------------------------------------------------------------------
 [Test-Probe]
 #---------------------------------------------------------------------------------------
-AnalogProbe0					OFF					g		c		# Select the signal connected to the analog probe0 
+AnalogProbe0					OFF					g		c		# Select the signal connected to the analog probe0
 	- OFF
 	- FAST
 	- SLOW_LG
@@ -323,11 +323,11 @@ DigitalProbe0					OFF					g		c		# Select the signal connected to the digital pro
 	- VAL_WINDOW
 	- T_OR
 	- Q_OR
-	
-ProbeChannel0				0					g		d		# Select the channel connected to the analog and digital probes0. Channels 0-31
-	
 
-AnalogProbe1					OFF					g		c		# Select the signal connected to the analog probe1 
+ProbeChannel0			    	0					g		d		# Select the channel connected to the analog and digital probes0. Channels 0-31
+
+
+AnalogProbe1					OFF					g		c		# Select the signal connected to the analog probe1
 	- OFF
 	- FAST
 	- SLOW_LG
@@ -352,15 +352,15 @@ ProbeChannel1					0					g		d		# Select the channel connected to the analog and d
 
 _BLANK 							-					-		-
 
-TestPulseSource					EXT					g		c		# Select the source for the test pulse signal 
+TestPulseSource					EXT					g		c		# Select the source for the test pulse signal
 	- OFF
 	- EXT
 	- T0-IN
 	- T1-IN
 	- PTRG
 	- SW-CMD
-	
-TestPulseAmplitude				300				g		d		# DAC setting for the internal test pulser (12 bit)
+
+TestPulseAmplitude				300					g		d		# DAC setting for the internal test pulser (12 bit)
 TestPulseDestination			ALL					g		c 		# Select which channels are connected to the test pulse input
 	- NONE
 	- ALL
