@@ -42,7 +42,7 @@ function createRule() {
 	grep -Fxq $USBRULE $FILERULE
 	res=$? 
 	if [ $res -ne 0 ]; then
-		echo $USBRULE >> $FILERULE
+		echo $USBRULE | sudo tee -a $FILERULE
 		echo "DONE"
 	else
 		echo "The permission rule is already present on this PC."

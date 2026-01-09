@@ -58,8 +58,7 @@ fi
 
 function CheckRequirements() {
 	dist=$1
-	chmod +x check_requirements.bash
-	./check_requirements.bash $dist
+	bash check_requirements.bash $dist
 	ret=$?
 
 	if [ $ret -eq 3 ]; then
@@ -72,15 +71,13 @@ function CheckRequirements() {
 }
 
 function Installation {
-	chmod +x installFERSlibJanus.bash
-	./installFERSlibJanus.bash
+	bash installFERSlibJanus.bash
 	res=$?
 	return $res
 }
 
 function CfgUSB {
-	chmod +x setUSBrules.bash
-	./setUSBrules.bash
+	bash setUSBrules.bash
 	res=$?
 	return $res
 }
