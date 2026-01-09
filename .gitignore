@@ -1,0 +1,27 @@
+# Created by configure and build step
+Makefile
+ferslib/Makefile
+ferslib/config.log
+ferslib/config.status
+ferslib/libtool
+ferslib/local
+ferslib/src/*.la
+ferslib/src/*.lo
+ferslib/src/*.o
+ferslib/src/.deps
+ferslib/src/.libs
+ferslib/src/Makefile
+macros/BinToCsv/*.o
+src/*.o
+bin/BinToCsv
+bin/JanusC
+# Python gui cache files
+gui/__pycache__
+# Files created or modified during runtime by JanusC or JanusPy
+bin/MsgLog.txt
+bin/FERSlib_Log.txt
+bin/RunVars.txt
+bin/Janus_Config.txt
+bin/DataFiles
+bin/B0_CitirocCfg_0.txt
+bin/B0_CitirocCfg_1.txt
